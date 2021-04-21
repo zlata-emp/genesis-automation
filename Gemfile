@@ -1,15 +1,15 @@
 source 'https://rubygems.org'
 ruby '2.7.2'
 
+gem 'rspec'
+
 group :development, :test do
-  # code analysis
-  gem 'pronto',            '~> 0.9.5'
-  gem 'pronto-brakeman',   '~> 0.9.1',  require: false
-  gem 'pronto-fasterer',   '~> 0.9.0',  require: false
-  gem 'pronto-reek',       '~> 0.9.0',  require: false
-  gem 'pronto-rubocop',    '~> 0.9.0',  require: false
-  gem 'pry',               '~> 0.13.0'
-  gem 'pry-byebug',        '~> 3.9.0'
-  gem 'rspec-core',        '~> 3.10.1'
-  gem 'selenium-webdriver','~> 2.53.4'
+  gem 'pry'
+  gem 'pry-byebug'
+  gem 'rspec-core'
+  gem 'rspec-expectations'
+  gem 'rubocop-performance'
+  gem 'selenium-webdriver'
+  gem 'rubocop'
+  gem 'rubocop-rspec'
 end
