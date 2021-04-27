@@ -1,5 +1,5 @@
 describe 'Login', :ui do
-  let(:page) { Browser.open }
+  let(:page) { Browser.reuse_page }
 
   it 'shows login page' do
     page.navigate.to 'http://localhost:3000/admin_users/sign_in'

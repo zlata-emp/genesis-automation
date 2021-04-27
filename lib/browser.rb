@@ -1,20 +1,27 @@
 # Manages browser instances.
-# Usage: let(:page) { Browser.open }     # uses one instance for all tests
-#        let(:page) { Browser.open_new } # opens new instance for every test
+#
+# Usage:
+# reuse instance for all tests
+#   let(:page) { Browser.reuse_page }
+# reuse instance with timeout 3 seconds
+#   let(:page) { Browser.reuse_page(timeout_sec: 3) }
+# opens new instance for every test
+#   let(:page) { Browser.open_new_page }
 class Browser
-  @page = Selenium::WebDriver.for :chrome
+  private_class_method :new
 
-  def self.open(timeout_sec: 10)
-    @page ||= Selenium::WebDriver.for :chrome
-    @page.manage.timeouts.implicit_wait = timeout_sec
-
-    @page
+  def self.reuse_page(timeout_sec: 10)
+    @reuse_page ||= open_new_page(timeout_sec: timeout_sec)
   end
 
-  def self.open_new(timeout_sec: 10)
-    new_browser_page = Selenium::WebDriver.for :chrome
-    new_browser_page.manage.timeouts.implicit_wait = timeout_sec # seconds
+  def self.open_new_page(timeout_sec: 10)
+    page = new_web_driver
+    page.manage.timeouts.implicit_wait = timeout_sec
 
-    new_browser_page
+    page
+  end
+
+  def self.new_web_driver(browser: :chrome)
+    Selenium::WebDriver.for browser
   end
 end
