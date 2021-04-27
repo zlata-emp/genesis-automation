@@ -61,9 +61,7 @@ PLATFORMS
 
 DEPENDENCIES
   pry-byebug (~> 3.9.0)
-  rspec
-  rspec-core (~> 3.10.1)
-  rspec-expectations (~> 3.10.1)
+  rspec (~> 3.10.0)
   rubocop (~> 1.13)
   rubocop-performance (~> 1.11.0)
   rubocop-rspec (~> 2.2.0)

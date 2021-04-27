@@ -1,9 +1,7 @@
 # frozen_string_literal: true
 
 require 'pry'
-require 'rubygems'
 require 'selenium-webdriver'
-require 'rspec/expectations'
 
 require './lib/browser'
 
