@@ -18,6 +18,11 @@ AllCops:
     - "config/environments/*"
     - "node_modules/**/*"
 
+# Naming
+
+Naming/MemoizedInstanceVariableName:
+  Enabled: false
+
 # Metrics Cops
 
 Metrics/ClassLength:
@@ -32,13 +37,13 @@ Metrics/ModuleLength:
 
 Metrics/ParameterLists:
   Description: "Pass no more than four parameters into a method."
-  Max: 4
+  Max: 7
   Enabled: true
 
 Metrics/MethodLength:
   Description: "Avoid methods longer than 5 lines of code."
   StyleGuide: "https://github.com/bbatsov/ruby-style-guide#short-methods"
-  Max: 5
+  Max: 15
   Enabled: true
 
 Metrics/BlockLength:
@@ -56,10 +61,6 @@ Metrics/BlockLength:
     - group
 
 # Style Cops
-
-Style/BlockDelimiters:
-  Exclude:
-    - "spec/**/*"
 
 Style/SymbolArray:
   Enabled: false
@@ -110,49 +111,18 @@ Style/StringLiterals:
   EnforcedStyle: single_quotes
   Enabled: true
 
-Style/TrailingCommaInArguments:
-  Description: "Checks for trailing comma in argument lists."
-  StyleGuide: "https://github.com/bbatsov/ruby-style-guide#no-trailing-array-commas"
-  EnforcedStyleForMultiline: comma
-  SupportedStylesForMultiline:
-    - comma
-    - consistent_comma
-    - no_comma
-  Enabled: true
-
-Style/TrailingCommaInArrayLiteral:
-  Description: "Checks for trailing comma in array literals."
-  StyleGuide: "https://github.com/bbatsov/ruby-style-guide#no-trailing-array-commas"
-  EnforcedStyleForMultiline: comma
-  SupportedStylesForMultiline:
-    - comma
-    - consistent_comma
-    - no_comma
-  Enabled: true
-
-Style/TrailingCommaInHashLiteral:
-  Description: "Checks for trailing comma in hash literals."
-  StyleGuide: "https://github.com/bbatsov/ruby-style-guide#no-trailing-array-commas"
-  EnforcedStyleForMultiline: comma
-  SupportedStylesForMultiline:
-    - comma
-    - consistent_comma
-    - no_comma
-  Enabled: true
-
 # Layout Cops
-
-Layout/ArgumentAlignment:
-  Exclude:
-    - "config/initializers/*"
+Layout/FirstArrayElementIndentation:
+  EnforcedStyle: consistent
 
 Layout/FirstArgumentIndentation:
   Enabled: false
 
-Layout/DotPosition:
-  Description: "Checks the position of the dot in multi-line method calls."
-  StyleGuide: "https://github.com/bbatsov/ruby-style-guide#consistent-multi-line-chains"
-  Enabled: false
+Layout/MultilineArrayBraceLayout:
+  EnforcedStyle: new_line
+
+Layout/MultilineHashBraceLayout:
+  EnforcedStyle: new_line
 
 Layout/LineLength:
   Description: "Limit lines to 120 characters."
@@ -173,6 +143,10 @@ Layout/MultilineMethodCallIndentation:
   Enabled: true
   EnforcedStyle: indented
 
+Layout/HashAlignment:
+  EnforcedColonStyle: table
+
+
 # Bundler Cops
 
 Bundler/OrderedGems:
@@ -180,4 +154,10 @@ Bundler/OrderedGems:
 
 # RSpec
 RSpec/MultipleExpectations:
+  Max: 5
+
+RSpec/ExampleLength:
+  Max: 15
+
+RSpec/NestedGroups:
   Max: 5
