@@ -2,6 +2,25 @@
 
 class Environment
   BASE_URL = 'http://127.0.0.1'
+  UI = {
+    login_url: "#{BASE_URL}:3000/admin_users/sign_in"
+  }.freeze
+
+  # disable mail checks on local, because it doesn't send mails but opens temp file only
+  MAIL = nil
+  # MAIL = {
+  #   address:     'genesis.test.automation@gmail.com',
+  #   subject:     'emerchantpay.com lost password',
+  #   from:        'admin@emerchantpay.com',
+  #   retries:     3,
+  #   retry_sleep: 1
+  # }.freeze
+
+  CONSUMER = {
+    processing_url: "#{BASE_URL}:3001/v1",
+    api_login:      'dea4917c5fc30ba004935b852746982b69dd280e',
+    api_password:   'wI0sZpoglALEwjczLG0YzDHfMrpM48hEflbYcC7O'
+  }.freeze
 
   # Example how the config from sanity checks may look as ruby constant
 
@@ -9,12 +28,6 @@ class Environment
   #   processing_url: "#{ENV_URL}:3003",
   #   gateways: %w[omnipay]
   # }
-
-  CONSUMER = {
-    processing_url: "#{BASE_URL}:3001/v1",
-    api_login:      'dea4917c5fc30ba004935b852746982b69dd280e',
-    api_password:   'wI0sZpoglALEwjczLG0YzDHfMrpM48hEflbYcC7O'
-  }.freeze
 
   # ISSUING = {
   #   processing_url: "#{ENV_URL}:3001/v1/issuing",
