@@ -10,6 +10,7 @@ require 'nokogiri'
 require 'nori'
 require 'ruby_dig'
 require 'httpclient'
+require 'gmail'
 require 'selenium-webdriver'
 
 Dir['./lib/**/*.rb'].sort.each { |file| require file }
@@ -33,6 +34,14 @@ require './config/local' unless ARGV.index('-r')
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
+  # Exclude specs with the same tags as the Environment.constants which are nil.
+  # For example if MAIL = nil, this will exclude all specs with tag :mail from
+  Environment.constants.each do |env_const|
+    unless Environment.const_get(env_const)
+      config.filter_run_excluding env_const.downcase.to_sym
+    end
+  end
+
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
   # assertions if you prefer.
@@ -115,4 +124,7 @@ RSpec.configure do |config|
 
   # Expose describe method globaly instead of calling RSpec.describe
   config.expose_dsl_globally = true
+
+  # Exclude specs tagged with :broken
+  config.filter_run_excluding broken: true
 end
