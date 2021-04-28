@@ -50,10 +50,8 @@ module PostData
     end
 
     def submit!
-      login    = request_params[:login]
-      password = request_params[:password]
-      url      = generate_url_with_path(request_params[:url], request_params[:request_url])
-      http_request.set_auth(url, login, password) if login.present? && password.present?
+      url = generate_url_with_path(request_params[:url], request_params[:request_url])
+      update_http_request_auth(url)
 
       @response = perform_request(
         request_params[:http_method] || POST,
@@ -87,6 +85,12 @@ module PostData
 
     def perform_request(http_method, url, request_head, request_body)
       http_request.public_send(http_method, url, request_body, request_head, follow_redirect: true).body
+    end
+
+    def update_http_request_auth(url)
+      login    = request_params[:login]
+      password = request_params[:password]
+      http_request.set_auth(url, login, password) if login.present? && password.present?
     end
 
     def generate_request_header_for(token, content_type)
