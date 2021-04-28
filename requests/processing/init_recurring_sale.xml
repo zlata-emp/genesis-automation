@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<payment_transaction>
+  <transaction_type>init_recurring_sale</transaction_type>
+  <transaction_id>4367dasfafasasdadadsa1</transaction_id>
+  <usage>club memership 2009-06</usage>
+  <remote_ip>245.253.2.12</remote_ip>
+  <amount>100</amount>
+  <currency>USD</currency>
+  <card_holder>Ivan Ivanov</card_holder>
+  <card_number>4200000000000000</card_number>
+  <cvv>123</cvv>
+  <expiration_month>2</expiration_month>
+  <expiration_year>2019</expiration_year>
+  <customer_email>no_reply@emerchantpay.com</customer_email>
+  <customer_phone>+4930001234567</customer_phone>
+  <birth_date>12-12-1944</birth_date>
+  <billing_address>
+    <first_name>Ivan</first_name>
+    <last_name>Ivanov</last_name>
+    <address1>Muster Str. 12</address1>
+    <zip_code>10178</zip_code>
+    <city>Berlin</city>
+    <state>NY</state>
+    <country>US</country>
+  </billing_address>
+  <shipping_address>
+    <first_name>Ivan</first_name>
+    <last_name>Ivanov</last_name>
+    <address1>Nikola Vapcarov 53V</address1>
+    <zip_code>1407</zip_code>
+    <city>Sofia</city>
+    <country>DE</country>
+  </shipping_address>
+</payment_transaction>

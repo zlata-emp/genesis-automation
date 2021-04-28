@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<payment_transaction>
+  <transaction_type>trustly_sale</transaction_type>
+  <transaction_id>7b6vb912bd2e3gdbee41x3e285x4c044c22dcce</transaction_id>
+  <usage>test</usage>
+  <remote_ip>94.26.28.135</remote_ip>
+  <amount>500</amount>
+  <currency>EUR</currency>
+  <notification_url>https://mhmihaylov.eu/genesis/notification.php</notification_url>
+  <return_success_url>https://example.com/return_success_url</return_success_url>
+  <return_failure_url>https://example.com/return_failure_url</return_failure_url>
+  <customer_email>no_reply@emerchantpay.com</customer_email>
+  <billing_address>
+    <first_name>Ivan</first_name>
+    <last_name>Ivanov</last_name>
+    <address1>wefwef</address1>
+    <zip_code>3233</zip_code>
+    <city>wefwef</city>
+    <country>DE</country>
+  </billing_address>
+  <shipping_address>
+    <first_name>Ivan</first_name>
+    <last_name>Ivanov</last_name>
+    <address1>Muster Str. 12</address1>
+    <zip_code>10178</zip_code>
+    <city>Berlin</city>
+    <state>DE</state>
+    <country>DE</country>
+  </shipping_address>
+  <dynamic_descriptor_params>
+    <merchant_name>wefwe</merchant_name>
+    <merchant_city>wef</merchant_city>
+  </dynamic_descriptor_params>
+  <risk_params/>
+</payment_transaction>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<payment_transaction>
+  <transaction_type>init_recurring_sale</transaction_type>
+  <transaction_id>omnipay-comfort-test-master-misc-sale-002</transaction_id>
+  <remote_ip>127.0.0.1</remote_ip>
+  <amount>100</amount>
+  <currency>USD</currency>
+  <card_holder>Bob Smith</card_holder>
+  <card_number>5409640000000009</card_number>
+  <cvv>111</cvv>
+  <expiration_month>12</expiration_month>
+  <expiration_year>2020</expiration_year>
+  <travel>
+    <ticket>
+      <ticket_reference_id>3b6dd8cc491e2eb7da5cb184d1fba8bb</ticket_reference_id>
+    </ticket>
+    <charges>
+      <charge>
+        <type>MISC</type>
+      </charge>
+    </charges>
+  </travel>
+</payment_transaction>

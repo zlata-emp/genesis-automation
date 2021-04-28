@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<payment_transaction>
+  <transaction_type>idebit_payout</transaction_type>
+  <transaction_id>f34j12e81eb2xx00ffxb7db913</transaction_id>
+  <customer_account_id>1534537</customer_account_id>
+  <amount>100</amount>
+  <currency>CAD</currency>
+  <remote_ip>127.0.0.1</remote_ip>
+  <reference_id></reference_id>
+</payment_transaction>

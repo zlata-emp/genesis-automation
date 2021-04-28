@@ -1,9 +1,18 @@
 # frozen_string_literal: true
 
 require 'pry'
+require 'active_support/all'
+require 'pp'
+require 'uri'
+require 'net/https'
+require 'yaml'
+require 'nokogiri'
+require 'nori'
+require 'ruby_dig'
+require 'httpclient'
 require 'selenium-webdriver'
 
-require './lib/browser'
+Dir['./lib/**/*.rb'].sort.each { |file| require file }
 
 # require default env
 require './config/local' unless ARGV.index('-r')

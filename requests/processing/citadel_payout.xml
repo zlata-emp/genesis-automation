@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<payment_transaction>
+  <transaction_type>citadel_payout</transaction_type>
+  <transaction_id>3av054e9vsss0223667787985756r4433334</transaction_id>
+  <usage>New iPad</usage>
+  <amount>100</amount>
+  <currency>EUR</currency>
+  <remote_ip>82.137.112.202</remote_ip>
+  <customer_email>no_reply@emerchantpay.com</customer_email>
+  <customer_phone>+446888123453</customer_phone>
+  <iban>DE89370400440532013000</iban>
+  <swift_code>DEUTDEDB899</swift_code>
+  <holder_name>John Doe werwe</holder_name>
+  <billing_address>
+    <first_name>Ivan</first_name>
+    <last_name>Ivanov</last_name>
+    <address1>14, First str</address1>
+    <zip_code>1002</zip_code>
+    <city>Berlin</city>
+    <country>DE</country>
+    <state></state>
+  </billing_address>
+  <shipping_address>
+    <first_name>Ivan</first_name>
+    <last_name>Ivanov</last_name>
+    <address1>14, First str</address1>
+    <zip_code>1002</zip_code>
+    <city>Berlin</city>
+    <country>DE</country>
+    <state></state>
+  </shipping_address>
+</payment_transaction>

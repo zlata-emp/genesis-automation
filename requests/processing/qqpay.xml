@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<payment_transaction>
+  <transaction_type>qqpay</transaction_type>
+  <transaction_id>09870328740928340</transaction_id>
+  <usage>New iPad</usage>
+  <notification_url>https://mhmihaylov.eu/genesis/notification.php</notification_url>
+  <return_success_url>https://example.com/return_success</return_success_url>
+  <return_failure_url>https://example.com/return_failure</return_failure_url>
+  <remote_ip>82.137.112.202</remote_ip>
+  <customer_email>no_reply@emerchantpay.com</customer_email>
+  <amount>500</amount>
+  <currency>CNY</currency>
+  <billing_address>
+    <first_name>Barney</first_name>
+    <last_name>Rubble</last_name>
+    <address1>14, Nerazdelni str</address1>
+    <zip_code>1407</zip_code>
+    <city>Sofia</city>
+    <country>DE</country>
+    <state></state>
+  </billing_address>
+  <shipping_address>
+    <first_name>Barney</first_name>
+    <last_name>Rubble</last_name>
+    <address1>14, Nerazdelni str</address1>
+    <zip_code>1407</zip_code>
+    <city>Sofia</city>
+    <country>DE</country>
+    <state></state>
+  </shipping_address>
+</payment_transaction>

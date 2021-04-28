@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<disable_consumer_request>
+  <consumer_id>123456</consumer_id>
+  <email>consumer@email.com</email>
+</disable_consumer_request>

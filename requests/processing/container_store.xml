@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<payment_transaction>
+  <transaction_type>container_store</transaction_type>
+  <transaction_id>fa3fw67fsatsdsa37rd8e1c080600d6f5</transaction_id>
+  <remote_ip>127.0.0.1</remote_ip>
+  <amount>1</amount>
+  <currency>EUR</currency>
+  <card_number>7000001164212578237</card_number>
+  <verification_code>686013</verification_code>
+</payment_transaction>

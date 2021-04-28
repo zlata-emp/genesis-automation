@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<payment_transaction>
+  <transaction_type>sdd_sale</transaction_type>
+  <transaction_id>16fc83ecfd0efad06d462fcbe984d9de</transaction_id>
+  <usage>test test</usage>
+  <remote_ip>94.26.28.135</remote_ip>
+  <amount>100</amount>
+  <currency>EUR</currency>
+  <billing_address>
+    <first_name>Ivan</first_name>
+    <last_name>Ivanov</last_name>
+    <address1>Muster Str. 12</address1>
+    <zip_code>10178</zip_code>
+    <city>Berlin</city>
+    <country>DE</country>
+  </billing_address>
+  <bic>PBNKDEFFXXX</bic>
+  <iban>DE09100100101234567893</iban>
+</payment_transaction>

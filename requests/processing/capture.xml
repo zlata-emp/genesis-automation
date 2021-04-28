@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<payment_transaction>
+  <transaction_type>capture</transaction_type>
+  <transaction_id>ot3i2hzxhosakfib5i78es2piuubdz4wrp4u</transaction_id>
+  <usage>test and test</usage>
+  <remote_ip>127.0.0.1</remote_ip>
+  <amount>100</amount>
+  <reference_id></reference_id>
+</payment_transaction>

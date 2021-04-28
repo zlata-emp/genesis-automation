@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<payment_transaction>
+  <transaction_type>insta_debit_payin</transaction_type>
+  <transaction_id>f34j1d2ec81efb23vd5b1db7db913</transaction_id>
+  <customer_account_id>1534537</customer_account_id>
+  <return_url>https://example.com/return_success</return_url>
+  <customer_email>no_reply@emerchantpay.com</customer_email>
+  <remote_ip>127.0.0.1</remote_ip>
+  <amount>100</amount>
+  <currency>CAD</currency>
+  <billing_address>
+    <first_name>Demo</first_name>
+    <last_name>Customer</last_name>
+    <address1>46 Donora Dr</address1>
+    <address2>23</address2>
+    <zip_code>M4B1B3</zip_code>
+    <city>Toronto</city>
+    <country>CA</country>
+    <state>ON</state>
+  </billing_address>
+  <shipping_address>
+    <first_name>Demo</first_name>
+    <last_name>Customer</last_name>
+    <address1>46 Donora Dr</address1>
+    <address2>23</address2>
+    <zip_code>M4B1B3</zip_code>
+    <city>Toronto</city>
+    <country>CA</country>
+    <state>ON</state>
+  </shipping_address>
+</payment_transaction>

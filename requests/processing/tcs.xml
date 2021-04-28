@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<payment_transaction>
+  <transaction_type>container_store</transaction_type>
+  <transaction_id>fa3fw67dfsatsddsa37rd8e1c08j0600d6f5</transaction_id>
+  <remote_ip>127.0.0.1</remote_ip>
+  <amount>1</amount>
+  <currency>EUR</currency>
+  <card_number>6051460092247153798</card_number>
+  <cvv>96407</cvv>
+  <customer_email>no_reply@emerchantpay.com</customer_email>
+</payment_transaction>

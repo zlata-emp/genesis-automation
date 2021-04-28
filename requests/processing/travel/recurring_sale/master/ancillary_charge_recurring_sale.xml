@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<payment_transaction>
+  <transaction_type>recurring_sale</transaction_type>
+  <transaction_id>43711</transaction_id>
+  <usage>40208 concert tickets</usage>
+  <amount>100</amount>
+  <currency>USD</currency>
+  <reference_id>2b4b4401cd5b9ab712f8cec1d98f132e</reference_id>
+  <travel>
+    <ticket>
+      <ticket_reference_id>3b6dd8cc491e2eb7da5cb184d1fba8bb</ticket_reference_id>
+    </ticket>
+    <charges>
+      <charge>
+        <type>BG</type>
+      </charge>
+    </charges>
+  </travel>
+</payment_transaction>

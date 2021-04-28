@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<payment_transaction>
+  <transaction_type><%= PaymentTransaction::CAPTURE %></transaction_type>
+  <transaction_id>random-generated</transaction_id>
+  <remote_ip>127.0.0.1</remote_ip>
+  <amount>100</amount>
+  <currency><%= currency %></currency>
+  <reference_id>dynamically-generated</reference_id>
+</payment_transaction>

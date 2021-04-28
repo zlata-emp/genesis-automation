@@ -1,0 +1,32 @@
+{
+  "card_brand": "master",
+  "card_type":  "virtual",
+  "currency":   "EUR",
+  "consumer": {
+    "email":          "test_physical_svilen@test.com",
+    "phone":          "+359123456789",
+    "title":          "Mr.",
+    "card_holder":    "SVILEN SIDEROV",
+    "birth_date":     "1987-12-31T00:00:00Z",
+    "billing_address": {
+      "country": "BG"
+    },
+    "shipping_address": {
+      "first_name":   "Svilen",
+      "last_name":    "Siderov",
+      "address1":     "Main Str.",
+      "address2":     "Alt Street.",
+      "zip_code":     "1407",
+      "city":         "Sofia",
+      "country":      "BG"
+    },
+    "identity": {
+      "identity_number":      "1234567890",
+      "document_type":        1,
+      "document_number":      "376919761",
+      "document_issuer":      "MVR",
+      "document_issue_date":  "2015-01-01T00:00:00Z",
+      "document_expiry_date": "2025-01-01T00:00:00Z"
+    }
+  }
+}

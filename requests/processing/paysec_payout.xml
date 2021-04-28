@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<payment_transaction>
+   <transaction_type>paysec_payout</transaction_type>
+   <transaction_id>12e3676f67xffds0rddef670</transaction_id>
+   <usage>New iPad</usage>
+   <remote_ip>82.137.112.202</remote_ip>
+   <notification_url>https://mhmihaylov.eu/genesis/notification.php</notification_url>
+   <return_success_url>https://example.com/return_success</return_success_url>
+   <return_failure_url>https://example.com/return_failure</return_failure_url>
+   <amount>500</amount>
+   <currency>CNY</currency>
+   <customer_phone>+49301234567</customer_phone>
+   <customer_email>no_reply@emerchantpay.com</customer_email>
+   <bank_account_number>1234567891234567890</bank_account_number>
+   <bank_account_name>秀英</bank_account_name>
+   <bank_code>BOC</bank_code>
+   <bank_branch>北京</bank_branch>
+   <bank_name>中国银行</bank_name>
+   <billing_address>
+      <first_name>秀</first_name>
+      <last_name>英</last_name>
+      <address1>Muster Str. 12</address1>
+      <address2>Muster Str. 12</address2>
+      <zip_code>10178</zip_code>
+      <city>北京</city>
+      <state>北京</state>
+      <country>CH</country>
+   </billing_address>
+   <shipping_address>
+      <first_name>秀</first_name>
+      <last_name>英</last_name>
+      <address1>Muster Str. 12</address1>
+      <address2>Muster Str. 12</address2>
+      <zip_code>10178</zip_code>
+      <city>北京</city>
+      <state>北京</state>
+      <country>CH</country>
+   </shipping_address>
+   <risk_params>
+      <user_id>233338448423</user_id>
+   </risk_params>
+</payment_transaction>

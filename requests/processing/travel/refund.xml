@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<payment_transaction>
+  <transaction_type>refund</transaction_type>
+  <transaction_id>omnipay-comfort-test-ancillary-refund-002</transaction_id>
+  <reference_id>97a4c1a5e855d09338e44bcdaeb9d400</reference_id>
+  <usage>40208 flight canceled</usage>
+  <amount>100</amount>
+  <currency>USD</currency>
+  <travel>
+    <ticket>
+      <ticket_change_indicator>C</ticket_change_indicator>
+      <credit_reason_indicator_1>A</credit_reason_indicator_1>
+      <credit_reason_indicator_2>O</credit_reason_indicator_2>
+    </ticket>
+  </travel>
+</payment_transaction>

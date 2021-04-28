@@ -1,0 +1,54 @@
+<payment_transaction>
+  <transaction_type>sale3d</transaction_type>
+  <transaction_id>Nikola-a4371eaa-8c9a-4dd0-a0f1-974f5545db4a</transaction_id>
+  <usage>40208 concert tickets</usage>
+  <remote_ip>245.253.2.12</remote_ip>
+  <notification_url>https://mhmihaylov.eu/genesis/notification.php</notification_url>
+  <return_success_url>http://www.example.com/success.html</return_success_url>
+  <return_failure_url>http://www.example.com/failure.html</return_failure_url>
+  <amount>100</amount>
+  <currency>EUR</currency>
+  <card_number>4012000000060085</card_number>
+  <card_holder>Nikola Test</card_holder>
+  <cvv>123</cvv>
+  <expiration_month>05</expiration_month>
+  <expiration_year>2024</expiration_year>
+  <customer_email>Denis@test.com</customer_email>
+  <customer_phone>+49301234567</customer_phone>
+  <billing_address>
+    <first_name>Ventsislav</first_name>
+    <last_name>Dimitrov</last_name>
+    <address1>20 address str.</address1>
+    <zip_code>1830</zip_code>
+    <city>Sofia</city>
+    <country>BG</country>
+  </billing_address>
+  <shipping_address>
+    <first_name>Nikola</first_name>
+    <last_name>Yurukov</last_name>
+    <address1>Nikola Vapcarov 53V</address1>
+    <zip_code>1407</zip_code>
+    <city>Sofia</city>
+    <country>DE</country>
+  </shipping_address>
+  <threeds_v2_params>
+    <control>
+      <device_type>browser</device_type>
+      <challenge_window_size>full_screen</challenge_window_size>
+      <challenge_indicator>preference</challenge_indicator>
+    </control>
+    <purchase>
+      <category>service</category>
+    </purchase>
+    <browser>
+      <accept_header>*/*</accept_header>
+      <java_enabled>true</java_enabled>
+      <language>en-GB</language>
+      <color_depth>32</color_depth>
+      <screen_height>900</screen_height>
+      <screen_width>1440</screen_width>
+      <time_zone_offset>-120</time_zone_offset>
+      <user_agent>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.97 Safari/537.36</user_agent>
+    </browser>
+  </threeds_v2_params>
+</payment_transaction>

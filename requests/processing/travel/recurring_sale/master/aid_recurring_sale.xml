@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<payment_transaction>
+  <transaction_type>recurring_sale</transaction_type>
+  <transaction_id>43711</transaction_id>
+  <usage>40208 concert tickets</usage>
+  <amount>100</amount>
+  <currency>USD</currency>
+  <reference_id>2b4b4401cd5b9ab712f8cec1d98f132e</reference_id>
+  <travel>
+    <ticket>
+      <ticket_number>1111</ticket_number>
+      <passenger_name>Bob Smith</passenger_name>
+      <customer_code>123</customer_code>
+      <issuing_carrier>LT</issuing_carrier>
+      <total_fare>100</total_fare>
+      <agency_name>Agnt</agency_name>
+      <agency_code>AGN001</agency_code>
+    </ticket>
+    <legs>
+      <leg>
+        <departure_date>2017-03-13</departure_date>
+        <carrier_code>AB</carrier_code>
+        <service_class>V</service_class>
+        <origin_city>NSN</origin_city>
+        <destination_city>AKL</destination_city>
+        <stopover_code>1</stopover_code>
+        <fare_basis_code/>
+        <flight_number/>
+        <departure_time/>
+        <departure_time_segment/>
+      </leg>
+    </legs>
+  </travel>
+</payment_transaction>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<payment_transaction>
+  <transaction_type>capture</transaction_type>
+  <transaction_id>omnipay-comfort-test-visa-car-rental-capture-001</transaction_id>
+  <remote_ip>127.0.0.1</remote_ip>
+  <amount>100</amount>
+  <currency>USD</currency>
+  <reference_id>e871a2b6d53c21aa10111785137566a3</reference_id>
+  <travel>
+    <ticket>
+      <ticket_reference_id>589d7ede9316fe1d5dfa16529f3de78a</ticket_reference_id>
+      <ticket_document_number>1111</ticket_document_number>
+    </ticket>
+    <charges>
+      <charge>
+        <type>BF</type>
+        <sub_type>BF</sub_type>
+      </charge>
+      <charge>
+        <type>BG</type>
+        <sub_type>BG</sub_type>
+      </charge>
+      <charge>
+        <type>CF</type>
+        <sub_type>CF</sub_type>
+      </charge>
+      <charge>
+        <type>CG</type>
+        <sub_type>CG</sub_type>
+      </charge>
+    </charges>
+  </travel>
+</payment_transaction>

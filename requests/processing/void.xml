@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<payment_transaction>
+  <transaction_type>void</transaction_type>
+  <transaction_id>r742nwntdantzgek7takh8phxxzkc751srui</transaction_id>
+  <reference_id></reference_id>
+  <usage>40208 concert canceled</usage>
+  <remote_ip>127.0.0.1</remote_ip>
+</payment_transaction>

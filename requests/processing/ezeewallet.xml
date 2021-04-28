@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<payment_transaction>
+   <transaction_type>ezeewallet</transaction_type>
+   <transaction_id>1234567890a1d18ddssads0ad21312dd1dsa</transaction_id>
+   <usage>iPad</usage>
+   <mode>test</mode>
+   <remote_ip>172.0.0.1</remote_ip>
+   <amount>100</amount>
+   <currency>EUR</currency>
+   <source_wallet_id>tech-support@emerchantpay.com</source_wallet_id>
+   <source_wallet_pwd>UGFzc3dvcmQx</source_wallet_pwd>
+   <return_success_url>https://example.com/return_success</return_success_url>
+   <return_failure_url>https://example.com/return_failure</return_failure_url>
+   <notification_url>https://mhmihaylov.eu/genesis/notification.php</notification_url>
+</payment_transaction>

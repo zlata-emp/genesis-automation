@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<payment_transaction>
+   <transaction_type>neosurf</transaction_type>
+   <transaction_id>TolkataNeoSurf1515934768071</transaction_id>
+   <usage>New iPad</usage>
+   <remote_ip>82.137.112.202</remote_ip>
+   <return_success_url>https://example.com/return_success</return_success_url>
+   <return_failure_url>https://example.com/return_failure</return_failure_url>
+   <amount>500</amount>
+   <currency>EUR</currency>
+   <voucher_number>26EMPY4774</voucher_number>
+   <customer_email>no_reply@emerchantpay.com</customer_email>
+   <customer_phone>+11234567890</customer_phone>
+   <billing_address>
+      <first_name>Ivan</first_name>
+      <last_name>Ivanov</last_name>
+      <address1>23, Doestreet</address1>
+      <zip_code>11923</zip_code>
+      <city>New York City</city>
+      <country>DE</country>
+      <state/>
+   </billing_address>
+   <shipping_address>
+      <first_name>Ivan</first_name>
+      <last_name>Ivanov</last_name>
+      <address1>23, Doestreet</address1>
+      <zip_code>11923</zip_code>
+      <city>New York City</city>
+      <country>DE</country>
+      <state/>
+   </shipping_address>
+</payment_transaction>

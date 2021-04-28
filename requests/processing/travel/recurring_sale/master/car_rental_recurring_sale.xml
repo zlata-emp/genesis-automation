@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<payment_transaction>
+  <transaction_type>recurring_sale</transaction_type>
+  <transaction_id>43711</transaction_id>
+  <usage>40208 concert tickets</usage>
+  <amount>100</amount>
+  <currency>USD</currency>
+  <reference_id>2b4b4401cd5b9ab712f8cec1d98f132e</reference_id>
+  <travel>
+    <rentals>
+      <car_rental>
+        <purchase_identifier>123456789</purchase_identifier>
+        <class_id>9999</class_id>
+        <pickup_date>2017-04-10</pickup_date>
+        <renter_name>Bob Smith</renter_name>
+        <return_city>0</return_city>
+        <return_state>SOF</return_state>
+        <return_country>BG</return_country>
+        <return_date>2017-04-13</return_date>
+        <renter_return_location_id>Sof123</renter_return_location_id>
+        <customer_code>123</customer_code>
+      </car_rental>
+    </rentals>
+  </travel>
+</payment_transaction>

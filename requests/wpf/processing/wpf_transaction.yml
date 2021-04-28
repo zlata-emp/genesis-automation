@@ -1,0 +1,28 @@
+transaction_id: QA-WPF-SanityChecks-<%= SecureRandom.hex(5) %>
+usage: Test
+description: Test transaction
+notification_url: https://mhmihaylov.eu/genesis/notification.php
+return_success_url: https://example.com/return_success
+return_failure_url: https://example.com/return_failure
+return_cancel_url: https://example.com/return_cancel
+amount: '<%= transaction.amount %>'
+currency: <%= transaction.currency %>
+customer_email: no_reply@emerchantpay.com
+expiration_month: '<%= transaction.expiration_month %>'
+expiration_year: '<%= transaction.expiration_year %>'
+card_holder: <%= transaction.card_holder %>
+card_number: '<%= transaction.card_number %>'
+cvv: '<%= transaction.cvv %>'
+customer_phone: '<%= transaction.customer_phone %>'
+birth_date: 01-01-1984
+billing_address:
+  first_name: Automation
+  last_name: Test
+  address1: 14, Nerazdelni str
+  zip_code: '1407'
+  city: Sofia
+  country: '<%= transaction.country %>'
+  state: SF
+transaction_types:
+  transaction_type:
+    name: <%= transaction.type %>

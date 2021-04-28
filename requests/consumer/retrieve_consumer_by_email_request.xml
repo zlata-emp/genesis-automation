@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<retrieve_consumer_request>
+  <email>consumer@email.com</email>
+</retrieve_consumer_request>

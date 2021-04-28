@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<create_consumer_request>
+  <email>consumer@email.com</email>
+  <billing_address>
+    <first_name>Travis</first_name>
+    <last_name>Pastrana</last_name>
+    <address1>Muster Str. 12</address1>
+    <zip_code>10178</zip_code>
+    <city>Los Angeles</city>
+    <state>CA</state>
+    <country>US</country>
+  </billing_address>
+  <shipping_address>
+    <first_name>Travis</first_name>
+    <last_name>Pastrana</last_name>
+    <address1>Muster Str. 12</address1>
+    <zip_code>10001</zip_code>
+    <city>Los Angeles</city>
+    <state>CA</state>
+    <country>US</country>
+  </shipping_address>
+</create_consumer_request>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<payment_transaction>
+  <transaction_type>sdd_refund</transaction_type>
+  <transaction_id>we4sckssc0wrs6sdhjxofwelf97w323</transaction_id>
+  <amount>100</amount>
+  <currency>EUR</currency>
+  <remote_ip>127.0.0.1</remote_ip>
+  <reference_id></reference_id>
+  <usage>Thank you for shop</usage>
+</payment_transaction>

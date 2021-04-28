@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<payment_transaction>
+  <transaction_type>authorize</transaction_type>
+  <transaction_id>omnipay-comfort-test-visa-car-rental-authorize-001</transaction_id>
+  <remote_ip>127.0.0.1</remote_ip>
+  <amount>100</amount>
+  <currency>USD</currency>
+  <card_holder>Bob Smith</card_holder>
+  <card_number>4001880000000055</card_number>
+  <cvv>617</cvv>
+  <expiration_month>12</expiration_month>
+  <expiration_year>2020</expiration_year>
+  <risk_params>
+    <session_id>a6396e5787c889a71abaef9ccb5b824b</session_id>
+  </risk_params>
+  <travel>
+    <rentals>
+      <car_rental>
+        <purchase_identifier/>
+        <pickup_date>2017-03-10</pickup_date>
+        <extra_charges>1</extra_charges>
+        <no_show_indicator>1</no_show_indicator>
+      </car_rental>
+    </rentals>
+  </travel>
+  <billing_address/>
+</payment_transaction>

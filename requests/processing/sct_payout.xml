@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<payment_transaction>
+  <transaction_type>sct_payout</transaction_type>
+  <transaction_id>5519d0d6fd6b1af20e5dfa27dc70es0b9</transaction_id>
+  <usage>wefwewef</usage>
+  <remote_ip>94.26.28.135</remote_ip>
+  <amount>500</amount>
+  <currency>EUR</currency>
+  <billing_address>
+    <first_name>Ivan</first_name>
+    <last_name>Ivanov</last_name>
+    <address1>Muster Str. 12</address1>
+    <zip_code>10178</zip_code>
+    <city>Berlin</city>
+    <country>DE</country>
+  </billing_address>
+  <bic>PBNKDEFFXXX</bic>
+  <iban>DE09100100101234567893</iban>
+</payment_transaction>

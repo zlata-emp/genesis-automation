@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<payment_transaction>
+  <transaction_type>bancomer</transaction_type>
+  <transaction_id>a1qf12e81eb23d0e00ffb85b1db7d152</transaction_id>
+  <usage>New iPad</usage>
+  <remote_ip>82.137.112.202</remote_ip>
+  <return_success_url>https://example.com/return_success</return_success_url>
+  <return_failure_url>https://example.com/return_failure</return_failure_url>
+  <amount>500</amount>
+  <currency>USD</currency>
+  <customer_email>no_reply@emerchantpay.com</customer_email>
+  <consumer_reference>123123123</consumer_reference>
+  <national_id>9112121166</national_id>
+  <billing_address>
+    <first_name>Barney</first_name>
+    <last_name>Rubble</last_name>
+    <address1>14, Nerazdelni str</address1>
+    <zip_code>1407</zip_code>
+    <city>Sidney</city>
+    <country>MX</country>
+    <state></state>
+  </billing_address>
+  <shipping_address>
+    <first_name>Barney</first_name>
+    <last_name>Rubble</last_name>
+    <address1>14, Nerazdelni str</address1>
+    <zip_code>1407</zip_code>
+    <city>Sidney</city>
+    <country>MX</country>
+    <state></state>
+  </shipping_address>
+</payment_transaction>

@@ -1,0 +1,17 @@
+{
+  "customer_information": {
+    "first_name": "Sanity",
+    "last_name": "Checks",
+    "customer_email": "no_reply@emerchantpay.com",
+    "address1": "Nikola Vapcarov 53V",
+    "city": "Sofia",
+    "zip_code": "32132",
+    "country": "BG",
+    "province": "Sofia"
+  },
+  "customer_unique_id": "",
+  "customer_registration_date": "",
+  "customer_registration_ip_address": "255.255.255.255",
+  "customer_username": "automation_sanity_checks",
+  "how_did_you_hear": "friend"
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<payment_transaction>
+  <transaction_type>insta_debit_payout</transaction_type>
+  <transaction_id>3c7f3ed67347bc32fb782e878</transaction_id>
+  <remote_ip>94.26.28.135</remote_ip>
+  <amount>100</amount>
+  <currency>CAD</currency>
+  <reference_id></reference_id>
+  <notification_url/>
+  <return_success_url/>
+  <return_failure_url/>
+  <customer_email>no_reply@emerchantpay.com</customer_email>
+  <billing_address>
+    <first_name>Demo</first_name>
+    <last_name>Customer</last_name>
+    <address1>wefwgw</address1>
+    <zip_code>34242</zip_code>
+    <city>wfwefwe</city>
+    <country>CA</country>
+    <state>AB</state>
+  </billing_address>
+  <shipping_address>
+    <first_name>Demo</first_name>
+    <last_name>Customer</last_name>
+    <address1>wefwgw</address1>
+    <zip_code>34242</zip_code>
+    <city>wfwefwe</city>
+    <country>CA</country>
+    <state>AB</state>
+  </shipping_address>
+  <risk_params/>
+</payment_transaction>

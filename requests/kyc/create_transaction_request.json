@@ -1,0 +1,24 @@
+{
+  "customer_information": {
+    "first_name": "Sanity",
+    "last_name": "Checks",
+    "customer_email": "no_reply@emerchantpay.com",
+    "address1": "Nikola Vapcarov 53V",
+    "city": "Sofia",
+    "zip_code": "32132",
+    "country": "BG",
+    "province": "Sofia"
+  },
+  "deposit_limits": {
+    "payment_method": "CC"
+  },
+  "transaction_unique_id": "",
+  "payment_details": {
+    "bin": "411111",
+    "last_digits": "1111"
+  },
+  "customer_ip_address": "255.255.255.255",
+  "transaction_created_at": "",
+  "currency": "USD",
+  "amount": 100
+}

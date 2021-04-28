@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<payment_transaction>
+  <transaction_type>fashioncheque</transaction_type>
+  <transaction_id>60bd6c7dfab11ffbfbabac1c8da4793d</transaction_id>
+  <usage>test_usage</usage>
+  <remote_ip>94.26.28.135</remote_ip>
+  <amount>1</amount>
+  <currency>EUR</currency>
+  <card_number>6046425112445631721</card_number>
+  <cvv>709168</cvv>
+  <customer_email>no_reply@emerchantpay.com</customer_email>
+  <billing_address>
+    <first_name>Ivan</first_name>
+    <last_name>Ivanov</last_name>
+    <address1>test_address1</address1>
+    <zip_code>12345</zip_code>
+    <city>test_city</city>
+    <country>GB</country>
+  </billing_address>
+  <shipping_address>
+    <first_name>Ivan</first_name>
+    <last_name>Ivanov</last_name>
+    <address1>test_address1</address1>
+    <zip_code>12345</zip_code>
+    <city>test_city</city>
+    <country>GB</country>
+  </shipping_address>
+  <risk_params/>
+</payment_transaction>

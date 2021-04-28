@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<payment_transaction>
+   <transaction_type>sale3d</transaction_type>
+   <transaction_id>n4nr8m2flfhtw0tv2uj5ins5uvlueloko9yh</transaction_id>
+   <notification_url>https://mhmihaylov.eu/genesis/notification.php</notification_url>
+   <return_success_url>http://example.com/success</return_success_url>
+   <return_failure_url>http://example.com/failure</return_failure_url>
+   <usage>40208 concert tickets</usage>
+   <remote_ip>245.253.2.12</remote_ip>
+   <amount>100</amount>
+   <currency>EUR</currency>
+   <card_holder>Ivan Ivanov</card_holder>
+   <card_number>5555555555554444</card_number>
+   <cvv>123</cvv>
+   <expiration_month>2</expiration_month>
+   <expiration_year>2020</expiration_year>
+   <customer_email>no_reply@emerchantpay.com</customer_email>
+   <customer_phone>+49301234567</customer_phone>
+   <birth_date>21-10-1980</birth_date>
+   <billing_address>
+     <first_name>Ivan</first_name>
+     <last_name>Ivanov</last_name>
+     <address1>Nikola Vapcarov 53V</address1>
+     <zip_code>10178</zip_code>
+     <city>Berlin</city>
+     <state>DE1</state>
+     <country>DE</country>
+   </billing_address>
+   <shipping_address>
+    <first_name>Ivan</first_name>
+    <last_name>Ivanov</last_name>
+    <address1>Nikola Vapcarov 53V</address1>
+    <zip_code>1407</zip_code>
+    <city>Sofia</city>
+    <country>DE</country>
+  </shipping_address>
+  <mpi_params>
+      <eci>05</eci>
+      <cavv>jPEIj3NO6qTQCBAAALx+BBAAAAA=</cavv>
+      <xid>0pv62FIrT5qQODB7DCewKgEBAQI=</xid>
+      <protocol_version>1</protocol_version>
+  </mpi_params>
+</payment_transaction>

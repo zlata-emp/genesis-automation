@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<payment_transaction>
+  <transaction_type><%= PaymentTransaction::INCREMENTAL_AUTHORIZE %></transaction_type>
+  <transaction_id>random-generated</transaction_id>
+  <usage>Extend hotel rezervation #<%= formatted_order_number %></usage>
+  <remote_ip>127.0.0.1</remote_ip>
+  <amount>100</amount>
+  <reference_id>dynamically-generated</reference_id>
+</payment_transaction>

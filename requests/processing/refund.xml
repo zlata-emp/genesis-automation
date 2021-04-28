@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<payment_transaction>
+  <transaction_type>refund</transaction_type>
+  <transaction_id>jcoqjtqrrbprt83lpbjxj86s2i7o3163zgae</transaction_id>
+  <reference_id></reference_id>
+  <usage>40208 concert canceld</usage>
+  <remote_ip>245.253.2.12</remote_ip>
+  <amount>100</amount>
+  <currency>EUR</currency>
+</payment_transaction>

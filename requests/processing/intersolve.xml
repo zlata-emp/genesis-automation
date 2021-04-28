@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<payment_transaction>
+  <transaction_type>intersolve</transaction_type>
+  <transaction_id>fa3fw6dwfsfbreadesr7rd8e1c080600d6f5</transaction_id>
+  <customer_email>no_reply@emerchantpay.com</customer_email>
+  <remote_ip>127.0.0.1</remote_ip>
+  <amount>1</amount>
+  <currency>EUR</currency>
+  <card_number>7000001186445045312</card_number>
+  <cvv>922730</cvv>
+</payment_transaction>

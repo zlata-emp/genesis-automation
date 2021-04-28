@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<payment_transaction>
+  <transaction_type>recurring_sale</transaction_type>
+  <transaction_id>43711</transaction_id>
+  <usage>40208 concert tickets</usage>
+  <amount>100</amount>
+  <currency>USD</currency>
+  <reference_id>2b4b4401cd5b9ab712f8cec1d98f132e</reference_id>
+  <travel>
+    <ticket>
+      <ticket_number>12345678123456</ticket_number>
+      <passenger_name>Passenger 01</passenger_name>
+      <customer_code/>
+      <restricted_ticket_indicator/>
+      <agency_name>Agent Smith</agency_name>
+      <agency_code>AGN001</agency_code>
+    </ticket>
+    <legs>
+      <leg>
+        <departure_date>2017-03-10</departure_date>
+        <origin_city>DUB</origin_city>
+        <carrier_code>VX</carrier_code>
+        <service_class>J</service_class>
+        <stopover_code>1</stopover_code>
+        <destination_city>ATL</destination_city>
+        <fare_basis_code/>
+        <flight_number/>
+      </leg>
+    </legs>
+  </travel>
+</payment_transaction>

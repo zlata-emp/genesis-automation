@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<payment_transaction>
+  <transaction_type>init_recurring_sale</transaction_type>
+  <transaction_id>omnipay-comfort-test-visa-ancillary-sale-021</transaction_id>
+  <remote_ip>127.0.0.1</remote_ip>
+  <amount>100</amount>
+  <currency>USD</currency>
+  <card_holder>Bob Smith</card_holder>
+  <card_number>4001880000000055</card_number>
+  <cvv>617</cvv>
+  <expiration_month>12</expiration_month>
+  <expiration_year>2020</expiration_year>
+  <travel>
+    <ticket>
+      <ticket_reference_id>589d7ede9316fe1d5dfa16529f3de78a</ticket_reference_id>
+      <ticket_document_number>1111</ticket_document_number>
+    </ticket>
+    <charges>
+      <charge>
+        <type>BF</type>
+        <sub_type>BF</sub_type>
+      </charge>
+      <charge>
+        <type>BG</type>
+        <sub_type>BG</sub_type>
+      </charge>
+      <charge>
+        <type>CF</type>
+        <sub_type>CF</sub_type>
+      </charge>
+      <charge>
+        <type>CG</type>
+        <sub_type>CG</sub_type>
+      </charge>
+    </charges>
+  </travel>
+</payment_transaction>

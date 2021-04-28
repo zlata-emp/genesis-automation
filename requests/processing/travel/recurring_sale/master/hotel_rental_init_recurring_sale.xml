@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<payment_transaction>
+  <transaction_type>init_recurring_sale</transaction_type>
+  <transaction_id>omnipay-comfort-test-master-hotel-rental-sale-003</transaction_id>
+  <remote_ip>127.0.0.1</remote_ip>
+  <amount>100</amount>
+  <currency>USD</currency>
+  <card_holder>Bob Smith</card_holder>
+  <card_number>5409640000000009</card_number>
+  <cvv>111</cvv>
+  <expiration_month>12</expiration_month>
+  <expiration_year>2020</expiration_year>
+  <travel>
+    <rentals>
+      <hotel_rental>
+        <purchase_identifier>1234567890</purchase_identifier>
+        <arrival_date>2017-03-10</arrival_date>
+        <departure_date>2017-03-11</departure_date>
+        <customer_code>345</customer_code>
+      </hotel_rental>
+    </rentals>
+  </travel>
+</payment_transaction>

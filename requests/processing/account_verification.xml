@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<payment_transaction>
+  <transaction_type>account_verification</transaction_type>
+  <transaction_id>l24rnxba1ofc3mkqi43c8a1mbacqhpg3syy3</transaction_id>
+  <remote_ip>245.253.2.12</remote_ip>
+  <card_holder>Ivan Ivanov</card_holder>
+  <card_number>4124939999999990</card_number>
+  <cvv>123</cvv>
+  <expiration_month>12</expiration_month>
+  <expiration_year>2019</expiration_year>
+  <customer_email>no_reply@emerchantpay.com</customer_email>
+  <customer_phone>+49301234567</customer_phone>
+  <description>efefefef</description>
+  <ssl_description>efefefewfefefe</ssl_description>
+  <usage>test</usage>
+  <billing_address>
+    <first_name>Max</first_name>
+    <last_name>Mustermann</last_name>
+    <address1>Muster Str. 12</address1>
+    <zip_code>10178</zip_code>
+    <city>Berlin</city>
+    <state>DE1</state>
+    <country>DE</country>
+  </billing_address>
+  <shipping_address>
+    <first_name>test</first_name>
+    <last_name>test</last_name>
+    <address1>Nikola Vapcarov 53V</address1>
+    <zip_code>1407</zip_code>
+    <city>Sofia</city>
+    <country>DE</country>
+  </shipping_address>
+</payment_transaction>

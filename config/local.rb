@@ -10,11 +10,11 @@ class Environment
   #   gateways: %w[omnipay]
   # }
 
-  # CONSUMER = {
-  #   processing_url: "#{ENV_URL}:3001/v1",
-  #   api_login: '846ff9581b9a999669787d3a4f9eee54200fd3ae',
-  #   api_password: 'e,,9DV80eBRpyKXBD,anwFxWfdArop8RJ3JhpesX'
-  # }
+  CONSUMER = {
+    processing_url: "#{BASE_URL}:3001/v1",
+    api_login:      'dea4917c5fc30ba004935b852746982b69dd280e',
+    api_password:   'wI0sZpoglALEwjczLG0YzDHfMrpM48hEflbYcC7O'
+  }.freeze
 
   # ISSUING = {
   #   processing_url: "#{ENV_URL}:3001/v1/issuing",

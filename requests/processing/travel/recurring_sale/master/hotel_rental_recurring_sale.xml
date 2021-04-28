@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<payment_transaction>
+  <transaction_type>recurring_sale</transaction_type>
+  <transaction_id>43711</transaction_id>
+  <usage>40208 concert tickets</usage>
+  <amount>100</amount>
+  <currency>USD</currency>
+  <reference_id>2b4b4401cd5b9ab712f8cec1d98f132e</reference_id>
+  <travel>
+    <rentals>
+      <hotel_rental>
+        <purchase_identifier>1234567890</purchase_identifier>
+        <arrival_date>2017-03-10</arrival_date>
+        <departure_date>2017-03-11</departure_date>
+        <customer_code>345</customer_code>
+      </hotel_rental>
+    </rentals>
+  </travel>
+</payment_transaction>

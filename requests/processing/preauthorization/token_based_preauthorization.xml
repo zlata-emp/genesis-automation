@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<payment_transaction>
+  <transaction_type><%= PaymentTransaction::AUTHORIZE %></transaction_type>
+  <transaction_id>random-generated</transaction_id>
+  <usage>Hotel rezervation #<%= formatted_order_number %></usage>
+  <remote_ip>127.0.0.1</remote_ip>
+  <amount>custom</amount>
+  <currency><%= currency %></currency>
+  <preauthorization>true</preauthorization>
+  <consumer_id><%= consumer_id %></consumer_id>
+  <token><%= authorization_token %></token>
+  <cvv>123</cvv>
+  <customer_email><%= customer_email %></customer_email>
+  <customer_phone><%= customer_phone %></customer_phone>
+  <billing_address>
+    <first_name><%= billing_address.first_name %></first_name>
+    <last_name><%= billing_address.last_name %></last_name>
+    <address1><%= billing_address.address1 %></address1>
+    <zip_code><%= billing_address.zip_code %></zip_code>
+    <city><%= billing_address.city %></city>
+    <state><%= billing_address.state %></state>
+    <country><%= billing_address.country %></country>
+  </billing_address>
+</payment_transaction>

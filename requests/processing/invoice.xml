@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<payment_transaction>
+  <transaction_type>invoice</transaction_type>
+  <transaction_id>602</transaction_id>
+  <payment_type>klarna</payment_type>
+  <notification_url>https://mhmihaylov.eu/genesis/notification.php</notification_url>
+  <return_success_url>https://example.com/return_success</return_success_url>
+  <return_failure_url>https://example.com/return_failure</return_failure_url>
+  <return_cancel_url>https://example.com/return_cancel</return_cancel_url>
+  <usage>Test</usage>
+  <remote_ip>245.253.2.12</remote_ip>
+  <amount>100</amount>
+  <currency>EUR</currency>
+  <customer_phone>0765260000</customer_phone>
+  <customer_email>no_reply@emerchantpay.com</customer_email>
+  <customer_gender>male</customer_gender>
+  <order_tax_amount>0</order_tax_amount>
+  <payment_method_category>pay_later</payment_method_category>
+  <billing_address>
+    <first_name>Ivan</first_name>
+    <last_name>Ivanov</last_name>
+    <address1>StÃ¥rgatan 1</address1>
+    <zip_code>12345</zip_code>
+    <city>Ankeborg</city>
+    <country>DE</country>
+  </billing_address>
+  <shipping_address>
+    <first_name>Ivan</first_name>
+    <last_name>Ivanov</last_name>
+    <address1>StÃ¥rgatan 1</address1>
+    <zip_code>12345</zip_code>
+    <city>Ankeborg</city>
+    <country>DE</country>
+  </shipping_address>
+  <items>
+    <item>
+      <item_type>physical</item_type>
+      <reference>19-402-USA</reference>
+      <name>BatteryPowerPack</name>
+      <quantity>1</quantity>
+      <unit_price>50</unit_price>
+      <tax_rate>0</tax_rate>
+      <total_amount>50</total_amount>
+      <total_discount_amount>0</total_discount_amount>
+      <total_tax_amount>0</total_tax_amount>
+      <image_url>https://example.com/image_url</image_url>
+      <product_url>https://example.com/product_url</product_url>
+      <quantity_unit>pcs</quantity_unit>
+      <product_identifiers>
+        <brand>BrandName</brand>
+        <category_path>Electronics Store > Batteries</category_path>
+        <global_trade_item_number>735858293167</global_trade_item_number>
+        <manufacturer_part_number>BOXNUC5CPYH</manufacturer_part_number>
+      </product_identifiers>
+      <merchant_data>
+        <marketplace_seller_info>Electronic gadgets</marketplace_seller_info>
+      </merchant_data>
+    </item>
+    <item>
+      <item_type>physical</item_type>
+      <reference>19-403-USA</reference>
+      <name>BatteryPowerPack</name>
+      <quantity>1</quantity>
+      <unit_price>50</unit_price>
+      <tax_rate>0</tax_rate>
+      <total_amount>50</total_amount>
+      <total_discount_amount>0</total_discount_amount>
+      <total_tax_amount>0</total_tax_amount>
+      <image_url>https://example.com/image_url</image_url>
+      <product_url>https://example.com/product_url</product_url>
+      <quantity_unit>pcs</quantity_unit>
+      <product_identifiers>
+        <brand>BrandName</brand>
+        <category_path>Electronics Store > Batteries</category_path>
+        <global_trade_item_number>735858293167</global_trade_item_number>
+        <manufacturer_part_number>BOXNUC5CPYH</manufacturer_part_number>
+      </product_identifiers>
+      <merchant_data>
+        <marketplace_seller_info>Electronic gadgets</marketplace_seller_info>
+      </merchant_data>
+    </item>
+  </items>
+</payment_transaction>

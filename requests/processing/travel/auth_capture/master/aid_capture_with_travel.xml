@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<payment_transaction>
+  <transaction_type>capture</transaction_type>
+  <transaction_id>omnipay-comfort-test-master-car-rental-capture-001</transaction_id>
+  <remote_ip>127.0.0.1</remote_ip>
+  <amount>100</amount>
+  <currency>USD</currency>
+  <reference_id>af8830942925bb14b9a2141347434a14</reference_id>
+  <travel>
+    <ticket>
+      <ticket_number>1111</ticket_number>
+      <passenger_name>Bob Smith</passenger_name>
+      <customer_code>123</customer_code>
+      <issuing_carrier>LT</issuing_carrier>
+      <total_fare>100</total_fare>
+      <agency_name>Agnt</agency_name>
+      <agency_code>AGN001</agency_code>
+    </ticket>
+    <legs>
+      <leg>
+        <departure_date>2017-03-13</departure_date>
+        <carrier_code>AB</carrier_code>
+        <service_class>V</service_class>
+        <origin_city>NSN</origin_city>
+        <destination_city>AKL</destination_city>
+        <stopover_code>1</stopover_code>
+        <fare_basis_code/>
+        <flight_number/>
+        <departure_time/>
+        <departure_time_segment/>
+      </leg>
+    </legs>
+  </travel>
+</payment_transaction>

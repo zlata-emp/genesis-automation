@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<payment_transaction>
+  <transaction_type>recurring_sale</transaction_type>
+  <transaction_id>43711</transaction_id>
+  <usage>40208 concert tickets</usage>
+  <amount>100</amount>
+  <currency>USD</currency>
+  <reference_id>2b4b4401cd5b9ab712f8cec1d98f132e</reference_id>
+  <travel>
+    <rentals>
+      <car_rental>
+        <purchase_identifier/>
+        <pickup_date>2017-03-10</pickup_date>
+        <extra_charges>1</extra_charges>
+        <no_show_indicator>1</no_show_indicator>
+      </car_rental>
+    </rentals>
+  </travel>
+</payment_transaction>

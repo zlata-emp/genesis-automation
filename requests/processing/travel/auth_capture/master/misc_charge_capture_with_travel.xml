@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<payment_transaction>
+  <transaction_type>capture</transaction_type>
+  <transaction_id>omnipay-comfort-test-master-car-rental-capture-001</transaction_id>
+  <remote_ip>127.0.0.1</remote_ip>
+  <amount>100</amount>
+  <currency>USD</currency>
+  <reference_id>af8830942925bb14b9a2141347434a14</reference_id>
+  <travel>
+    <ticket>
+      <ticket_reference_id>3b6dd8cc491e2eb7da5cb184d1fba8bb</ticket_reference_id>
+    </ticket>
+    <charges>
+      <charge>
+        <type>MISC</type>
+      </charge>
+    </charges>
+  </travel>
+</payment_transaction>

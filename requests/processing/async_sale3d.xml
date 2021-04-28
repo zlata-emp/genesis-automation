@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<payment_transaction>
+  <transaction_type>sale3d</transaction_type>
+  <transaction_id>2a1adgjzgze8bju54cmkpo0ske4g6obalv7ml80</transaction_id>
+  <notification_url>https://mhmihaylov.eu/genesis/notification.php</notification_url>
+  <return_success_url>http://example.com/success</return_success_url>
+  <return_failure_url>http://example.com/failure</return_failure_url>
+  <usage>40208 concert tickets</usage>
+  <remote_ip>192.168.1.1</remote_ip>
+  <amount>100</amount>
+  <currency>EUR</currency>
+  <card_holder>Ivan Ivanov</card_holder>
+  <card_number>4711100000000000</card_number>
+  <cvv>123</cvv>
+  <expiration_month>9</expiration_month>
+  <expiration_year>2019</expiration_year>
+  <customer_email>no_reply@emerchantpay.com</customer_email>
+  <customer_phone>+49301234567</customer_phone>
+  <birth_date>12-12-1944</birth_date>
+  <billing_address>
+    <first_name>Ivan</first_name>
+    <last_name>Ivanov</last_name>
+    <address1>125 PRESTON RD BRIGH</address1>
+    <zip_code>90210</zip_code>
+    <city>Berlin</city>
+    <state>DE1</state>
+    <country>GB</country>
+  </billing_address>
+  <shipping_address>
+    <first_name>Ivan</first_name>
+    <last_name>Ivanov</last_name>
+    <address1>Nikola Vapcarov 53V</address1>
+    <zip_code>1407</zip_code>
+    <city>Sofia</city>
+    <country>DE</country>
+  </shipping_address>
+  <dynamic_descriptor_params>
+    <merchant_name>Descriptor Name</merchant_name>
+    <merchant_city>0987654321</merchant_city>
+  </dynamic_descriptor_params>
+</payment_transaction>

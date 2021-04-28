@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<payment_transaction>
+  <transaction_type>credit</transaction_type>
+  <transaction_id>e5d15yl7tx00tg5pr8vlclz8akztbb7fb9w1</transaction_id>
+  <reference_id></reference_id>
+  <usage>40208 concert canceled</usage>
+  <remote_ip>245.253.2.12</remote_ip>
+  <amount>100</amount>
+  <currency>USD</currency>
+</payment_transaction>

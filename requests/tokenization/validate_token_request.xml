@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<validate_token_request>
+  <email>no_reply@emerchantpay.com</email>
+  <consumer_id>6698</consumer_id>
+</validate_token_request>
