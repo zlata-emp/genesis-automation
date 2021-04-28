@@ -7,7 +7,6 @@ class Environment
   }.freeze
 
   # disable mail checks on local, because it doesn't send mails but opens temp file only
-  MAIL = nil
   # MAIL = {
   #   address:     'genesis.test.automation@gmail.com',
   #   subject:     'emerchantpay.com lost password',
