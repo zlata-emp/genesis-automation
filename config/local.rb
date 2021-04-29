@@ -6,7 +6,7 @@ class Environment
   REQUESTS_DIR = 'requests/'
 
   UI = {
-    login_url: "#{BASE_URL}:3000/admin_users/sign_in" }.freeze
+    login_url: "#{BASE_URL}:3000/admin_users/sign_in" }.with_indifferent_access.freeze
 
   # disable mail checks on local, because it doesn't send mails but opens temp file only
   # MAIL = {
@@ -14,28 +14,27 @@ class Environment
   #   subject:     'emerchantpay.com lost password',
   #   from:        'admin@emerchantpay.com',
   #   retries:     3,
-  #   retry_sleep: 1
-  # }.freeze
+  #   retry_sleep: 1 }.with_indifferent_access.freeze
 
   CONSUMER = {
     processing_url: "#{BASE_URL}:3001/v1",
     api_login:      'dea4917c5fc30ba004935b852746982b69dd280e',
     api_password:   'wI0sZpoglALEwjczLG0YzDHfMrpM48hEflbYcC7O',
     consumer_id:    1,
-    consumer_email: 'no_reply@emerchantpay.com' }.freeze
+    consumer_email: 'no_reply@emerchantpay.com' }.with_indifferent_access.freeze
 
   # Example how the config from sanity checks may look as ruby constant
 
   # WPF = {
   #   processing_url: "#{ENV_URL}:3003",
   #   gateways: %w[omnipay]
-  # }
+  # }.with_indifferent_access.freeze
 
   # ISSUING = {
   #   processing_url: "#{ENV_URL}:3001/v1/issuing",
   #   processing_token: 'A-HkhdnM4dgXN4ukUmstGrD00Q7ZjKKbw-aCRGBI18g',
   #   processing_providers: [paynetics, ppro, transact, gps]
-  # }
+  # }.with_indifferent_access.freeze
 
   # TOKENIZATION = {
   #   processing_url: "#{ENV_URL}:3001/v1",
@@ -43,7 +42,7 @@ class Environment
   #   consumer_email: 'no_reply@emerchantpay.com',
   #   api_login: '846ff9581b9a999669787d3a4f9eee54200fd3ae',
   #   api_password: 'e,,9DV80eBRpyKXBD,anwFxWfdArop8RJ3JhpesX'
-  # }
+  # }.with_indifferent_access.freeze
 
   # PROCESSING = {
   #   processing_url: "#{ENV_URL}:3001/process",
@@ -94,5 +93,5 @@ class Environment
   #     api_login: 'brokenc801a4982b7e3791d7d02ff47739a140f0e15d4b',
   #     api_password: 'brokenYGnX9w5LbbjIj42riU37fUdMMIpvjane94zYqk6f'
   #   }
-  # }
+  # }.with_indifferent_access.freeze
 end
