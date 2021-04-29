@@ -5,10 +5,12 @@ describe 'Processing bogus sale', :api, processing: :bogus do
   env_config   = Environment::PROCESSING[:bogus]
 
   context 'with valid request' do
+    merge_params = ProcessingHelper.transaction_id_param
+                     .merge(ProcessingHelper.master_test_card_params)
     request = PostData::Request.build_and_submit(
                 request_file,
                 env_config:   env_config,
-                merge_params: { transaction_id: ProcessingHelper.transaction_id }
+                merge_params: merge_params
               )
 
     it 'is approved' do
