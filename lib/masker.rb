@@ -1,7 +1,4 @@
-# frozen_string_literal: true
-
 # This class is responsible for masking sensitive data on modifing and printing repsponses in the console
-#
 class Masker
   ELEMENT_TO_SETTINGS_FOR_MASKING_MAPPING = {
     card_number: { first: 6, last: 4 },

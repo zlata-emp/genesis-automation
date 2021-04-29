@@ -1,8 +1,5 @@
-# frozen_string_literal: true
-
-# XML request performer class
-#
 module PostData
+  # XML request performer class
   class Xml < PostData::Body
     def element_value(xml, element)
       xml = Hash.from_xml(xml.to_s)

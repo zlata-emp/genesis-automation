@@ -1,7 +1,25 @@
 # frozen_string_literal: true
 
 module PostData
-  # This class is responsible for sending requests
+  # This class is responsible for sending http post requests for api testing
+  #
+  # Usage:
+  # Most common usecase is to build and send the request in one go:
+  #   PostData::Request.build_and_submit(request_file, params)
+  # where request_file is the filepath to the file conatining the request body
+  #                    is searched under the #{Environment::REQUESTS_DIR}  directory
+  #                    Example: request_file = 'consumer/create_consumer_request.xml'
+  #       params is hash containing all tags to be merged/updated/replaced with the body from request_file
+  # The request can be build without sending with:
+  #   request = PostData::Request.build(request_file, params)
+  # which will return the request object of type PostData::Request
+  # and can be sent with:
+  #   request.submit!
+  # returning the response body as html string
+  # if needed the response can be converted to hash with:
+  #   request.response_body
+  # or just the data unde the root tag:
+  #   request.response_body_root
   class Request
     DELETE = 'delete'
     GET    = 'get'
@@ -19,7 +37,9 @@ module PostData
                        password:     config[:api_password],
                        content_type: request_content_type,
                        request_url:  request_url(filename),
-                       request_body: Body.load_from("requests/#{filename}", request_content_type).modify_request(params)
+                       request_body: Body.load_from("#{Environment::REQUESTS_DIR}/#{filename}",
+                                                    request_content_type)
+                                         .modify_request(params)
           })
     end
 

@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 module PostData
   # Base data modifier
   class Body
