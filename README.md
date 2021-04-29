@@ -13,6 +13,11 @@ rspec --tag ui
 ```
 which will run only the ui tests (with tags :ui).
 
+Filtering tests by tags with values like `processing: :bogus` use:
+```
+rspec -t processing:bogus
+```
+
 You can also tag each individual test and specify multiple tags at run time:
 ```
 rspec --tag ui -t mail
