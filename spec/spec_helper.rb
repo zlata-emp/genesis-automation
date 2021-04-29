@@ -126,4 +126,8 @@ RSpec.configure do |config|
 
   # Exclude specs tagged with :broken
   config.filter_run_excluding broken: true
+
+  # Exclude erroneous specs.
+  # To run them explicitly use `--tag erroneous` on command line.
+  config.filter_run_excluding :erroneous
 end
