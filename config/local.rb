@@ -21,7 +21,9 @@ class Environment
   CONSUMER = {
     processing_url: "#{BASE_URL}:3001/v1",
     api_login:      'dea4917c5fc30ba004935b852746982b69dd280e',
-    api_password:   'wI0sZpoglALEwjczLG0YzDHfMrpM48hEflbYcC7O'
+    api_password:   'wI0sZpoglALEwjczLG0YzDHfMrpM48hEflbYcC7O',
+    consumer_id:    1,
+    consumer_email: 'no_reply@emerchantpay.com'
   }.freeze
 
   # Example how the config from sanity checks may look as ruby constant

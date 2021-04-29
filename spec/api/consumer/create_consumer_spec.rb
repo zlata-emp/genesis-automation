@@ -1,4 +1,4 @@
-describe 'Create_consumer', :api, :consumer do
+describe 'Create consumer', :api, :consumer do
   let(:request_file) { 'consumer/create_consumer_request.xml' }
   let(:request) { PostData::Request.build_and_submit(request_file, params) }
 
