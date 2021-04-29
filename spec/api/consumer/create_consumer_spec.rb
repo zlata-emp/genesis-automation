@@ -7,7 +7,7 @@ describe 'Create consumer', :api, :consumer do
     valid_email  = "test_email_#{Time.now.utc.strftime('%Y%m%d_%H%M%S')}@emerchantpay.com"
     request      = PostData::Request.build_and_submit(
                      request_file,
-                     { email: valid_email }
+                     merge_params: { email: valid_email }
                    )
 
     it 'returns status error' do
@@ -19,7 +19,7 @@ describe 'Create consumer', :api, :consumer do
     context 'with existing email' do
       request = PostData::Request.build_and_submit(
                   request_file,
-                  { email: Environment::CONSUMER[:consumer_email] }
+                  merge_params: { email: Environment::CONSUMER[:consumer_email] }
                 )
 
       it 'returns status error' do
@@ -30,7 +30,7 @@ describe 'Create consumer', :api, :consumer do
     context 'without email' do
       request = PostData::Request.build_and_submit(
                   request_file,
-                  { email: nil }
+                  merge_params: { email: nil }
                 )
 
       it 'returns status error' do

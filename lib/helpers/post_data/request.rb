@@ -31,24 +31,24 @@ module PostData
 
     attr_reader :http_request, :request_params
 
-    def self.build(filename, params = {})
-      config = env_api_config(filename)
+    def self.build(filename, env_config: nil, merge_params: {})
+      env_config = env_api_config(filename) if env_config.blank?
       request_content_type = content_type(filename)
       @request = new(
-                   { url:          config[:processing_url],
-                     login:        config[:api_login],
-                     password:     config[:api_password],
+                   { url:          env_config[:processing_url],
+                     login:        env_config[:api_login],
+                     password:     env_config[:api_password],
                      content_type: request_content_type,
-                     request_url:  request_url(filename),
+                     request_url:  request_url(filename, env_config),
                      request_body: Body.load_from(
                                      "#{Environment::REQUESTS_DIR}/#{filename}",
                                      request_content_type
-                                   ).modify_request(params) }
+                                   ).modify_request(merge_params) }
                  )
     end
 
-    def self.build_and_submit(filename, params = {})
-      build(filename, params)
+    def self.build_and_submit(filename, env_config: nil, merge_params: {})
+      build(filename, env_config: env_config, merge_params: merge_params)
       @request.submit!
     end
 
@@ -67,8 +67,8 @@ module PostData
       filename.split('.').last
     end
 
-    def self.request_url(filename)
-      return '' unless filename.include?('_request')
+    def self.request_url(filename, env_config)
+      return env_config[:token] unless filename.include?('_request')
 
       filename.split('/').last.split('_request').first
     end
