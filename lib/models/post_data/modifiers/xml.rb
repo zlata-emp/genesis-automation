@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module PostData
   # XML request performer class
   class Xml < PostData::Body

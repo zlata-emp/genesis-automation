@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Checks for lost password mails.
 #
 # ##### Usage:

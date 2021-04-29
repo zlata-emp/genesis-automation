@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 describe 'Login', :ui do
   let(:page) { Browser.reuse_page }
 

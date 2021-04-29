@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 describe 'Reset password', :ui do
   let(:page) { Browser.open_new_page }
 

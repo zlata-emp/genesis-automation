@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 describe 'Create consumer', :api, :consumer do
   request_file = 'consumer/create_consumer_request.xml'
 

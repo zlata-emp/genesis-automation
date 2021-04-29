@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Manages browser instances.
 #
 # ##### Usage:
