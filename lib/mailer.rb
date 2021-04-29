@@ -28,10 +28,12 @@ class Mailer
   attr_reader :gmail
 
   def read_all_lost_pass_mails
-    gmail.inbox.find(:unread,
-                     subject: @subject,
-                     after:   Date.parse(Time.now.utc.strftime('%Y%m%d_%H')),
-                     from:    @from).each do |email|
+    gmail.inbox.find(
+      :unread,
+      subject: @subject,
+      after:   Date.parse(Time.now.utc.strftime('%Y%m%d_%H')),
+      from:    @from
+    ).each do |email|
       # p email.message.from
       p email.subject
       # p email.message.body.raw_source
@@ -52,9 +54,11 @@ class Mailer
   end
 
   def check_unread_lost_pass_count
-    gmail.inbox.count(:unread,
-                      subject: @subject,
-                      after:   Date.parse(Time.now.utc.strftime('%Y%m%d_%H')),
-                      from:    @from)
+    gmail.inbox.count(
+      :unread,
+      subject: @subject,
+      after:   Date.parse(Time.now.utc.strftime('%Y%m%d_%H')),
+      from:    @from
+    )
   end
 end

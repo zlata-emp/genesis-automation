@@ -1,10 +1,11 @@
 describe 'Retrieve consumer', :api, :consumer do
-  let(:env) { Environment::CONSUMER }
-  let(:request_file) { 'consumer/retrieve_consumer_request.xml' }
-  let(:request) { PostData::Request.build_and_submit(request_file, params) }
+  request_file = 'consumer/retrieve_consumer_request.xml'
 
   context 'with valid existing consumer id' do
-    let(:params) { { consumer_id: env[:consumer_id] } }
+    request = PostData::Request.build_and_submit(
+                request_file,
+                { email: Environment::CONSUMER[:consumer_email] }
+              )
 
     it 'returns status error' do
       expect(request.response_body_root).to include({ status: 'enabled' })
@@ -12,21 +13,23 @@ describe 'Retrieve consumer', :api, :consumer do
   end
 
   context 'with valid existing email' do
-    let(:params) do
-      { consumer_id: nil,
-        email:       env[:consumer_email]
-      }
-    end
+    request = PostData::Request.build_and_submit(
+                request_file,
+                { consumer_id: nil,
+                  email:       Environment::CONSUMER[:consumer_email] }
+              )
 
     it 'returns status error' do
-      p request.request_body
       expect(request.response_body_root).to include({ status: 'enabled' })
     end
   end
 
   context 'with erroneous request', :erroneous do
     context 'with non existing consumer_id' do
-      let(:params) { { consumer_id: -1 } }
+      request = PostData::Request.build_and_submit(
+                  request_file,
+                  { consumer_id: -1 }
+                )
 
       it 'returns status error' do
         expect(request.response_body_root).to include({ status: 'error' })
@@ -34,10 +37,15 @@ describe 'Retrieve consumer', :api, :consumer do
     end
 
     context 'with non existing email' do
-      let(:params) { { email: 'non_existing_consumer@email.com' } }
+      request = PostData::Request.build_and_submit(
+                  request_file,
+                  { consumer_id: nil,
+                    email:       'non_existing_consumer@email.com' }
+                )
 
       it 'returns status error' do
         expect(request.response_body_root).to include({ status: 'error' })
+        expect(request.response_body_root).to include({ message: 'error' })
       end
     end
   end

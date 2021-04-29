@@ -2,12 +2,11 @@
 
 class Environment
   BASE_URL = 'http://127.0.0.1'
-  
+
   REQUESTS_DIR = 'requests/'
 
   UI = {
-    login_url: "#{BASE_URL}:3000/admin_users/sign_in"
-  }.freeze
+    login_url: "#{BASE_URL}:3000/admin_users/sign_in" }.freeze
 
   # disable mail checks on local, because it doesn't send mails but opens temp file only
   # MAIL = {
@@ -23,8 +22,7 @@ class Environment
     api_login:      'dea4917c5fc30ba004935b852746982b69dd280e',
     api_password:   'wI0sZpoglALEwjczLG0YzDHfMrpM48hEflbYcC7O',
     consumer_id:    1,
-    consumer_email: 'no_reply@emerchantpay.com'
-  }.freeze
+    consumer_email: 'no_reply@emerchantpay.com' }.freeze
 
   # Example how the config from sanity checks may look as ruby constant
 
@@ -47,7 +45,7 @@ class Environment
   #   api_password: 'e,,9DV80eBRpyKXBD,anwFxWfdArop8RJ3JhpesX'
   # }
 
-  # TRANSACTIONS = {
+  # PROCESSING = {
   #   processing_url: "#{ENV_URL}:3001/process",
   #   bogus: {
   #     request_params: {

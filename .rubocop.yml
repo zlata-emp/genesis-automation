@@ -113,16 +113,28 @@ Style/StringLiterals:
 
 # Layout Cops
 Layout/FirstArrayElementIndentation:
-  EnforcedStyle: consistent
+  EnforcedStyle: special_inside_parentheses
 
 Layout/FirstArgumentIndentation:
-  Enabled: false
+  EnforcedStyle: consistent_relative_to_receiver
+
+Layout/ArgumentAlignment:
+  EnforcedStyle: with_first_argument
+
+Layout/FirstMethodParameterLineBreak:
+  Enabled: true
+
+Layout/FirstMethodArgumentLineBreak:
+  Enabled: true
+
+Layout/MultilineMethodArgumentLineBreaks:
+  Enabled: true
 
 Layout/MultilineArrayBraceLayout:
-  EnforcedStyle: new_line
+  EnforcedStyle: same_line
 
 Layout/MultilineHashBraceLayout:
-  EnforcedStyle: new_line
+  EnforcedStyle: same_line
 
 Layout/LineLength:
   Description: "Limit lines to 120 characters."

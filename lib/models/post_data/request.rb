@@ -34,15 +34,17 @@ module PostData
     def self.build(filename, params = {})
       config = env_api_config(filename)
       request_content_type = content_type(filename)
-      @request = new({ url:          config[:processing_url],
-                       login:        config[:api_login],
-                       password:     config[:api_password],
-                       content_type: request_content_type,
-                       request_url:  request_url(filename),
-                       request_body: Body.load_from("#{Environment::REQUESTS_DIR}/#{filename}",
-                                                    request_content_type)
-                                         .modify_request(params)
-          })
+      @request = new(
+                   { url:          config[:processing_url],
+                     login:        config[:api_login],
+                     password:     config[:api_password],
+                     content_type: request_content_type,
+                     request_url:  request_url(filename),
+                     request_body: Body.load_from(
+                                     "#{Environment::REQUESTS_DIR}/#{filename}",
+                                     request_content_type
+                                   ).modify_request(params) }
+                 )
     end
 
     def self.build_and_submit(filename, params = {})
@@ -76,11 +78,11 @@ module PostData
       update_http_request_auth(url)
 
       @response = perform_request(
-        request_params[:http_method] || POST,
-        url,
-        generate_request_header_for(request_params[:token], request_params[:content_type]),
-        request_params[:request_body]
-      )
+                    request_params[:http_method] || POST,
+                    url,
+                    generate_request_header_for(request_params[:token], request_params[:content_type]),
+                    request_params[:request_body]
+                  )
 
       self
     end
