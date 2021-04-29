@@ -1,10 +1,9 @@
 # frozen_string_literal: true
 
 describe 'Reset password', :ui do
-  let(:page) { Browser.open_new_page }
-
   context 'when filling lost password form' do
     it 'sends mail', :mail do
+      page = Browser.open_new_page
       page.navigate.to Environment::UI[:login_url]
 
       page.find_element(:link, 'Unable to log in?').click

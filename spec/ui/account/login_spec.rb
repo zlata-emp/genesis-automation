@@ -1,9 +1,8 @@
 # frozen_string_literal: true
 
 describe 'Login', :ui do
-  let(:page) { Browser.reuse_page }
-
   it 'shows login page' do
+    page = Browser.reuse_page
     page.navigate.to Environment::UI[:login_url]
 
     expect(page.title).to be == 'Sessions'
@@ -11,6 +10,7 @@ describe 'Login', :ui do
   end
 
   it 'sign in' do
+    page = Browser.reuse_page
     page.navigate.to Environment::UI[:login_url]
 
     user_field = page.find_element(:id, 'admin_user_login')
