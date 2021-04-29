@@ -47,7 +47,7 @@ will start all test tagged with `:ui` for the staging psp env.
 ##### Config files
 
 For every environment there should be a config file in `config` dir.
-These files are regular ruby classes named `Environment`, which contain constants like `BASE_URL`, `Transactions`, `MAIL`, `WPF`.
+These files are regular ruby classes named `Environment`, which contain constants like `BASE_URL`, `PROCESSING`, `MAIL`, `WPF` etc.
 The constants are used to store information for the particular component. For example `MAIL` constant will hold the infor of the email address on which you may revieve lost password recovery mails.
 **Note!**: If the constant is not defined, this will automatically exclude all rspecs tagged for this component. (Example: if `MAIL` is not defined or just commented out - this will be equivalent to running rspec with `-t mail`, which means all tests tagged with :mail will be excluded).
 

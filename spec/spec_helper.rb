@@ -35,7 +35,7 @@ require './config/local' unless ARGV.index('-r')
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
   # Exclude specs with the same tags as the Environment.constants which are not defined.
-  [:UI, :CONSUMER, :MAIL, :WPF, :TRANSACTIONS, :ISSUING, :TOKENIZATION].each do |env_const|
+  [:UI, :CONSUMER, :MAIL, :WPF, :PROCESSING, :ISSUING, :TOKENIZATION].each do |env_const|
     unless Environment.const_defined?(env_const)
       config.filter_run_excluding env_const.downcase.to_sym
     end
