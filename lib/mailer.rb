@@ -1,4 +1,8 @@
 # Checks for lost password mails.
+#
+# ##### Usage:
+#   **<code>Mailer.recieved_lost_pass_mail</code>**
+# will return boolean if mail was recieved in the configured mail in Environment::MAIL
 class Mailer
   def initialize
     @gmail       = Gmail.connect(Environment::MAIL[:address], 'Test1234!!')

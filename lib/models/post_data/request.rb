@@ -3,23 +3,25 @@
 module PostData
   # This class is responsible for sending http post requests for api testing
   #
-  # Usage:
+  # ##### Usage:
   # Most common usecase is to build and send the request in one go:
-  #   PostData::Request.build_and_submit(request_file, params)
-  # where request_file is the filepath to the file conatining the request body
-  #                    is searched under the #{Environment::REQUESTS_DIR}  directory
+  #   **<code>PostData::Request.build_and_submit(request_file, params)</code>**
+  #   - __request_file__ is the filepath to the file conatining the request body
+  #                    is searched under the __#{Environment::REQUESTS_DIR}__ directory
   #                    Example: request_file = 'consumer/create_consumer_request.xml'
-  #       params is hash containing all tags to be merged/updated/replaced with the body from request_file
+  #   - __params__ is hash containing all tags to be merged/updated/replaced with the body from request_file
+  #
   # The request can be build without sending with:
-  #   request = PostData::Request.build(request_file, params)
+  #   **<code>request = PostData::Request.build(request_file, params)</code>**
   # which will return the request object of type PostData::Request
   # and can be sent with:
-  #   request.submit!
+  #   __request.submit!__
   # returning the response body as html string
-  # if needed the response can be converted to hash with:
-  #   request.response_body
+  #
+  # If needed the response can be converted to hash with:
+  #   __request.response_body__
   # or just the data unde the root tag:
-  #   request.response_body_root
+  #   __request.response_body_root__
   class Request
     DELETE = 'delete'
     GET    = 'get'

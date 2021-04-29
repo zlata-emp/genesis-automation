@@ -1,12 +1,12 @@
 # Manages browser instances.
 #
-# Usage:
+# ##### Usage:
 # reuse instance for all tests
-#   let(:page) { Browser.reuse_page }
+#   **<code>let(:page) { Browser.reuse_page }</code>**
 # reuse instance with timeout 3 seconds
-#   let(:page) { Browser.reuse_page(timeout_sec: 3) }
+#   **<code>let(:page) { Browser.reuse_page(timeout_sec: 3) }</code>**
 # opens new instance for every test
-#   let(:page) { Browser.open_new_page }
+#   **<code>let(:page) { Browser.open_new_page }</code>**
 class Browser
   private_class_method :new
 
