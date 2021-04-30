@@ -33,6 +33,12 @@ module APIRequest
       finalize_modification
     end
 
+    def merge_params(params)
+      merge_request(params)
+
+      self
+    end
+
     private
 
     def merge_request(params)
