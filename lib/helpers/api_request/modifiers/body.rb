@@ -1,17 +1,17 @@
 # frozen_string_literal: true
 
-module PostData
+module APIRequest
   # Base data modifier
   class Body
     attr_reader :body, :content_type, :filename
 
     def self.load_from_file(filename)
-      PostData.const_get(content_type_from_filename(filename).capitalize)
+      APIRequest.const_get(content_type_from_filename(filename).capitalize)
         .new("#{Environment::REQUESTS_DIR}/#{filename}")
     end
 
     def self.parse(content, content_type)
-      PostData.const_get(content_type.capitalize).parse(content)
+      APIRequest.const_get(content_type.capitalize).parse(content)
     end
 
     def self.content_type_from_filename(filename)
@@ -19,7 +19,7 @@ module PostData
     end
 
     def initialize(filename)
-      raise 'PostData::Body Class cannot be initialized. Use Body.load_from_file' if instance_of?(Body)
+      raise 'APIRequest::Body Class cannot be initialized. Use Body.load_from_file' if instance_of?(Body)
 
       @filename     = filename
       @content_type = self.class.content_type_from_filename(filename)

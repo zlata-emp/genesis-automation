@@ -1,19 +1,19 @@
 # frozen_string_literal: true
 
-module PostData
+module APIRequest
   # This class is responsible for sending http post requests for api testing
   #
   # ##### Usage:
   # Most common usecase is to build and send the request in one go:
-  #   **<code>PostData::Request.build_and_submit(request_file, params)</code>**
+  #   **<code>APIRequest::Request.build_and_submit(request_file, params)</code>**
   #   - __request_file__ is the filepath to the file conatining the request body
   #                    is searched under the __#{Environment::REQUESTS_DIR}__ directory
   #                    Example: request_file = 'consumer/create_consumer_request.xml'
   #   - __params__ is hash containing all tags to be merged/updated/replaced with the body from request_file
   #
   # The request can be build without sending with:
-  #   **<code>request = PostData::Request.build(request_file, params)</code>**
-  # which will return the request object of type PostData::Request
+  #   **<code>request = APIRequest::Request.build(request_file, params)</code>**
+  # which will return the request object of type APIRequest::Request
   # and can be sent with:
   #   __request.submit!__
   # returning the response body as html string

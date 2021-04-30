@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-module PostData
+module APIRequest
   # XML request performer class
-  class Xml < PostData::Body
+  class Xml < APIRequest::Body
     def element_value(xml, element)
       xml = Hash.from_xml(xml.to_s)
       return if xml.blank?

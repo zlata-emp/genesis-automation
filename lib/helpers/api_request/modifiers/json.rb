@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-module PostData
+module APIRequest
   # JSON data modifier
-  class Json < PostData::Body
+  class Json < APIRequest::Body
     def element_value(json, element)
       json = JSON.parse json
       return if json.blank?
