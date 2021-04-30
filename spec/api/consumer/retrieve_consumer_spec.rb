@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 describe 'Retrieve consumer', :api, :consumer do
-  request_file = 'consumer/retrieve_consumer_request.xml'
+  request_file = PostData::Body.load_from_file 'consumer/retrieve_consumer_request.xml'
 
   context 'with valid existing consumer id' do
     request = PostData::Request.build_and_submit(

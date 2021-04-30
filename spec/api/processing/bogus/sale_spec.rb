@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 describe 'Processing bogus sale', :api, processing: :bogus do
-  request_file = 'processing/sale.xml'
+  request_file = PostData::Body.load_from_file 'processing/sale.xml'
   env_config   = Environment::PROCESSING[:bogus]
 
   context 'with valid request' do

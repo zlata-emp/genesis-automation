@@ -3,20 +3,26 @@
 module PostData
   # Base data modifier
   class Body
-    attr_reader :body
+    attr_reader :body, :content_type, :filename
 
-    def self.load_from(filename, content_type)
-      PostData.const_get(content_type.capitalize).new(filename)
+    def self.load_from_file(filename)
+      PostData.const_get(content_type_from_filename(filename).capitalize)
+        .new("#{Environment::REQUESTS_DIR}/#{filename}")
     end
 
-    def self.load(content_type, content)
+    def self.parse(content, content_type)
       PostData.const_get(content_type.capitalize).parse(content)
     end
 
-    def initialize(filename)
-      raise 'PostData::Body Class cannot be initialized. Use Body.load_from' if instance_of?(Body)
+    def self.content_type_from_filename(filename)
+      filename.split('.').last
+    end
 
-      @filename = filename
+    def initialize(filename)
+      raise 'PostData::Body Class cannot be initialized. Use Body.load_from_file' if instance_of?(Body)
+
+      @filename     = filename
+      @content_type = self.class.content_type_from_filename(filename)
       parse_body
     end
 
@@ -28,8 +34,6 @@ module PostData
     end
 
     private
-
-    attr_reader :filename
 
     def merge_request(params)
       return merge_body(params) if same_root_tag?(params)

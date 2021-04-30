@@ -3,7 +3,7 @@
 class Environment
   BASE_URL = 'http://127.0.0.1'
 
-  REQUESTS_DIR = 'requests/'
+  REQUESTS_DIR = 'requests'
 
   UI = {
     login_url: "#{BASE_URL}:3000/admin_users/sign_in" }.with_indifferent_access.freeze

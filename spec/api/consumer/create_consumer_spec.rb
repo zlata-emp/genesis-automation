@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 describe 'Create consumer', :api, :consumer do
-  request_file = 'consumer/create_consumer_request.xml'
+  request_file = PostData::Body.load_from_file 'consumer/create_consumer_request.xml'
 
   context 'with valid non existing email' do
     valid_email  = "test_email_#{Time.now.utc.strftime('%Y%m%d_%H%M%S')}@emerchantpay.com"

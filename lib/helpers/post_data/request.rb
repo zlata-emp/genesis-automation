@@ -31,24 +31,21 @@ module PostData
 
     attr_reader :http_request, :request_params
 
-    def self.build(filename, env_config: nil, merge_params: {})
-      env_config = env_api_config(filename) if env_config.blank?
-      request_content_type = content_type(filename)
+    def self.build(request_body, env_config: nil, merge_params: {})
+      env_config = env_api_config(request_body.filename) if env_config.blank?
+
       @request = new(
                    { url:          env_config[:processing_url],
                      login:        env_config[:api_login],
                      password:     env_config[:api_password],
-                     content_type: request_content_type,
-                     request_url:  request_url(filename, env_config),
-                     request_body: Body.load_from(
-                                     "#{Environment::REQUESTS_DIR}/#{filename}",
-                                     request_content_type
-                                   ).modify_request(merge_params) }
+                     content_type: request_body.content_type,
+                     request_url:  request_url(request_body.filename, env_config),
+                     request_body: request_body.modify_request(merge_params) }
                  )
     end
 
-    def self.build_and_submit(filename, env_config: nil, merge_params: {})
-      build(filename, env_config: env_config, merge_params: merge_params)
+    def self.build_and_submit(request_body, env_config: nil, merge_params: {})
+      build(request_body, env_config: env_config, merge_params: merge_params)
       @request.submit!
     end
 
@@ -60,11 +57,7 @@ module PostData
     end
 
     def self.env_api_config(filename)
-      Environment.const_get(filename.split('/').first.upcase)
-    end
-
-    def self.content_type(filename)
-      filename.split('.').last
+      Environment.const_get(filename.split('/').second.upcase)
     end
 
     def self.request_url(filename, env_config)
@@ -92,7 +85,7 @@ module PostData
     end
 
     def response_body
-      Body.load(request_params[:content_type], @response)
+      Body.parse(@response, request_params[:content_type])
     end
 
     def response_body_root
