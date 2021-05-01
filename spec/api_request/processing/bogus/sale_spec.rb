@@ -9,12 +9,13 @@ module APIRequest
       request_file = Body.load_from_file(request_filename)
                        .merge_params(ProcessingHelper.transaction_id_param)
                        .merge_params(ProcessingHelper.master_test_card_params)
-      request = Request.build_and_submit(
-                  request_file,
-                  env_config: env_config
-                )
 
       it 'is approved' do
+        request = Request.build_and_submit(
+                    request_file,
+                    env_config: env_config
+                  )
+
         expect(request.response_body_root).to include({ status: 'approved' })
       end
     end

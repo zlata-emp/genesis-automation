@@ -6,52 +6,52 @@ module APIRequest
     env_config   = Environment::CONSUMER
 
     context 'with valid existing consumer id' do
-      request = Request.build_and_submit(
-                  request_file,
-                  env_config:   env_config,
-                  merge_params: { consumer_id: Environment::CONSUMER[:consumer_id] }
-                )
-
       it 'returns status enabled' do
+        request = Request.build_and_submit(
+                    request_file,
+                    env_config:   env_config,
+                    merge_params: { consumer_id: Environment::CONSUMER[:consumer_id] }
+                  )
+
         expect(request.response_body_root).to include({ status: 'enabled' })
       end
     end
 
     context 'with valid existing email' do
-      request = Request.build_and_submit(
-                  request_file,
-                  env_config:   env_config,
-                  merge_params: { consumer_id: nil,
-                                  email:       Environment::CONSUMER[:consumer_email] }
-                )
-
       it 'returns status enabled' do
+        request = Request.build_and_submit(
+                    request_file,
+                    env_config:   env_config,
+                    merge_params: { consumer_id: nil,
+                                    email:       Environment::CONSUMER[:consumer_email] }
+                  )
+
         expect(request.response_body_root).to include({ status: 'enabled' })
       end
     end
 
     context 'with erroneous request', :erroneous do
       context 'with non existing consumer_id' do
-        request = Request.build_and_submit(
-                    request_file,
-                    env_config:   env_config,
-                    merge_params: { consumer_id: -1 }
-                  )
-
         it 'returns status error' do
+          request = Request.build_and_submit(
+                      request_file,
+                      env_config:   env_config,
+                      merge_params: { consumer_id: -1 }
+                    )
+
           expect(request.response_body_root).to include({ status: 'error' })
         end
       end
 
       context 'with non existing email' do
-        request = Request.build_and_submit(
-                    request_file,
-                    env_config:   env_config,
-                    merge_params: { consumer_id: nil,
-                                    email:       'non_existing_consumer@email.com' }
-                  )
-
         it 'returns status error' do
+          request = Request.build_and_submit(
+                      request_file,
+                      env_config:   env_config,
+                      merge_params: { consumer_id: nil,
+                                      email:       'non_existing_consumer@email.com' }
+                    )
+
           expect(request.response_body_root).to include({ status: 'error' })
           expect(request.response_body_root).to include({ technical_message: 'Consumer not found!' })
         end
