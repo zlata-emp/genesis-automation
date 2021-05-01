@@ -2,6 +2,7 @@
 
 class Environment
   REQUESTS_DIR = 'requests'
+  TRANSACTION_ID_PREFIX = 'qa_checks-'
 
   UI = {
     login_url: 'http://127.0.0.1:3000/admin_users/sign_in' }.with_indifferent_access.freeze

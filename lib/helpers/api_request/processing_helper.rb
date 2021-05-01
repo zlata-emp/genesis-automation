@@ -4,7 +4,7 @@ module APIRequest
   class ProcessingHelper
     def self.transaction_id_param
       timestamp = Time.now.utc.strftime('%Y%m%d_%H%M%S_%L')
-      { transaction_id: "qa_checks-d#{timestamp}" }
+      { transaction_id: "#{Environment::TRANSACTION_ID_PREFIX}d#{timestamp}" }
     end
 
     def self.master_test_card_params
