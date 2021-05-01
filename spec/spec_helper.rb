@@ -34,8 +34,19 @@ require './config/local' unless ARGV.index('-r')
 #
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
-  # Exclude specs with the same tags as the Environment.constants which are not defined.
-  [:UI, :CONSUMER, :MAIL, :WPF, :PROCESSING, :ISSUING, :TOKENIZATION].each do |env_const|
+  # Exclude erroneous specs.
+  # To run them explicitly use `--tag erroneous` on command line.
+  config.filter_run_excluding :erroneous
+
+  # Exclude specs tagged with :broken
+  config.filter_run_excluding broken: true
+
+  # Load spec files only from dirs containing names from defined Envoronment constants
+  dirs_with_spec_files = Environment.constants.each(&:to_s).join(',').downcase
+  config.pattern = "**{,/*/**}/{#{dirs_with_spec_files}}/{,**/}*_spec.rb"
+  # Exclude file specs with the same tags as the undefined Environment.constants.
+  # mail have to be ecluded explicitly because tests marked with it are not in it's specific dir.
+  [:MAIL].each do |env_const|
     unless Environment.const_defined?(env_const)
       config.filter_run_excluding env_const.downcase.to_sym
     end
@@ -123,11 +134,4 @@ RSpec.configure do |config|
 
   # Expose describe method globaly instead of calling RSpec.describe
   config.expose_dsl_globally = true
-
-  # Exclude specs tagged with :broken
-  config.filter_run_excluding broken: true
-
-  # Exclude erroneous specs.
-  # To run them explicitly use `--tag erroneous` on command line.
-  config.filter_run_excluding :erroneous
 end
