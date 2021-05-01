@@ -2,13 +2,6 @@
 
 require 'pry'
 require 'active_support/all'
-require 'pp'
-require 'uri'
-require 'net/https'
-require 'yaml'
-require 'nokogiri'
-require 'nori'
-require 'ruby_dig'
 require 'httpclient'
 require 'gmail'
 require 'selenium-webdriver'

@@ -10,13 +10,8 @@ group :development, :test do
   gem 'rubocop',             '~> 1.13',   require: false
   gem 'rubocop-rspec',       '~> 2.2.0',  require: false
   gem 'rubocop-performance', '~> 1.11.0', require: false
+  gem 'activesupport',       '~> 6.1'
+  gem 'builder',             '~> 3.2'
+  gem 'httpclient',          '~> 2.8'
+  gem 'gmail',               '~> 0.7.1'
 end
-
-gem 'activesupport', '~> 6.1'
-gem 'builder',       '~> 3.2'
-gem 'httpclient',    '~> 2.8'
-gem 'nokogiri',      '~> 1.11'
-gem 'nori',          '~> 2.6'
-gem 'ruby_dig',      '~> 0.0.2'
-gem 'webmock',       '~> 3.12'
-gem 'gmail',         '~> 0.7.1'
