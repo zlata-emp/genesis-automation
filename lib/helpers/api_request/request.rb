@@ -31,9 +31,7 @@ module APIRequest
 
     attr_reader :http_request, :request_params
 
-    def self.build(request_body, env_config: nil, merge_params: {})
-      env_config = env_api_config(request_body.filename) if env_config.blank?
-
+    def self.build(request_body, env_config:, merge_params: {})
       @request = new(
                    { url:          env_config[:processing_url],
                      login:        env_config[:api_login],
@@ -44,7 +42,7 @@ module APIRequest
                  )
     end
 
-    def self.build_and_submit(request_body, env_config: nil, merge_params: {})
+    def self.build_and_submit(request_body, env_config:, merge_params: {})
       build(request_body, env_config: env_config, merge_params: merge_params)
       @request.submit!
     end
@@ -54,10 +52,6 @@ module APIRequest
       http_request.force_basic_auth       = true
       http_request.ssl_config.verify_mode = OpenSSL::SSL::VERIFY_NONE
       @request_params                     = request_params
-    end
-
-    def self.env_api_config(filename)
-      Environment.const_get(filename.split('/').second.upcase)
     end
 
     def self.request_url(filename, env_config)

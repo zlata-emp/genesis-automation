@@ -3,10 +3,12 @@
 module APIRequest
   describe 'Retrieve consumer', :api, :consumer do
     request_file = Body.load_from_file 'consumer/retrieve_consumer_request.xml'
+    env_config   = Environment::CONSUMER
 
     context 'with valid existing consumer id' do
       request = Request.build_and_submit(
                   request_file,
+                  env_config:   env_config,
                   merge_params: { consumer_id: Environment::CONSUMER[:consumer_id] }
                 )
 
@@ -18,6 +20,7 @@ module APIRequest
     context 'with valid existing email' do
       request = Request.build_and_submit(
                   request_file,
+                  env_config:   env_config,
                   merge_params: { consumer_id: nil,
                                   email:       Environment::CONSUMER[:consumer_email] }
                 )
@@ -31,6 +34,7 @@ module APIRequest
       context 'with non existing consumer_id' do
         request = Request.build_and_submit(
                     request_file,
+                    env_config:   env_config,
                     merge_params: { consumer_id: -1 }
                   )
 
@@ -42,6 +46,7 @@ module APIRequest
       context 'with non existing email' do
         request = Request.build_and_submit(
                     request_file,
+                    env_config:   env_config,
                     merge_params: { consumer_id: nil,
                                     email:       'non_existing_consumer@email.com' }
                   )
