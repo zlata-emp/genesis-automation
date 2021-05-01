@@ -10,7 +10,7 @@ module APIRequest
                   merge_params: { consumer_id: Environment::CONSUMER[:consumer_id] }
                 )
 
-      it 'returns status error' do
+      it 'returns status enabled' do
         expect(request.response_body_root).to include({ status: 'enabled' })
       end
     end
@@ -22,7 +22,7 @@ module APIRequest
                                   email:       Environment::CONSUMER[:consumer_email] }
                 )
 
-      it 'returns status error' do
+      it 'returns status enabled' do
         expect(request.response_body_root).to include({ status: 'enabled' })
       end
     end

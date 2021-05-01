@@ -11,7 +11,7 @@ module APIRequest
                        merge_params: { email: valid_email }
                      )
 
-      it 'returns status error' do
+      it 'returns status enabled' do
         expect(request.response_body_root).to include({ status: 'enabled' })
       end
     end
