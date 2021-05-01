@@ -40,7 +40,7 @@ See http://elementalselenium.com/tips/58-tagging for how to use rspec tagging
 ### Configuration
 ##### Environment 
 
-By default `./config/local.rb` is loaded to add Environment variables to be used during the tests. (Example: `BASE_URL = 'http://127.0.0.1'`)
+By default `./config/local.rb` is loaded to add Environment variables to be used during the tests.
 If you need to run tests for other env just specify the file to be required by rspec:
 ```
 rspec -r "./config/staging_psp.rb" -t ui
@@ -52,7 +52,7 @@ will start all test tagged with `:ui` for the staging psp env.
 ##### Config files
 
 For every environment there should be a config file in `config` dir.
-These files are regular ruby classes named `Environment`, which contain constants like `BASE_URL`, `PROCESSING`, `MAIL`, `WPF` etc.
+These files are regular ruby classes named `Environment`, which contain constants like `PROCESSING`, `MAIL`, `WPF` etc.
 The constants are used to store information for the particular component. For example `MAIL` constant will hold the infor of the email address on which you may revieve lost password recovery mails.
 **Note!**: If the constant is not defined, this will automatically exclude all rspecs tagged for this component. (Example: if `MAIL` is not defined or just commented out - this will be equivalent to running rspec with `-t mail`, which means all tests tagged with :mail will be excluded).
 
