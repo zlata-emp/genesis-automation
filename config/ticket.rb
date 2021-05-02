@@ -7,8 +7,8 @@
 #   **<code>rspec -r './config/ticket'</code>**
 # make sure you've selected the correct env variables for TICKET, SUB_DOMAIN and DOMAIN
 #
-require './config/staging_psp'
-class Environment
+require './config/local'
+class Environment < Constants
   TICKET                = 'f2020022002'
   TRANSACTION_ID_PREFIX = "#{Dir.home.split('/').last}_#{TICKET}-"
 end
