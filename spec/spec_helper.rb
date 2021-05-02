@@ -25,6 +25,15 @@ require './config/local' unless ARGV.index('-r')
 # the additional setup, and require it from the spec files that actually need
 # it.
 #
+# This seems like a hack, probably it will be better to just list them in the Environment class
+def dirs_defined_in_env_list
+  dirs_defined_in_env_list = Environment.constants.each(&:to_s).join(',').downcase
+  return dirs_containing_specs_list unless Environment.const_defined?(:PROCESSING)
+
+  processing_subdirs = Environment::PROCESSING.keys.each(&:to_s).join(',').downcase
+
+  "#{dirs_defined_in_env_list}}{,/}{,#{processing_subdirs}"
+end
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
   # Exclude erroneous specs.
@@ -35,8 +44,8 @@ RSpec.configure do |config|
   config.filter_run_excluding broken: true
 
   # Load spec files only from dirs containing names from defined Envoronment constants
-  dirs_with_spec_files = Environment.constants.each(&:to_s).join(',').downcase
-  config.pattern = "**{,/*/**}/{#{dirs_with_spec_files}}/{,**/}*_spec.rb"
+  config.pattern = "spec/{,**/}{#{dirs_defined_in_env_list}}/{,**/}*_spec.rb"
+  puts config.pattern
   # Exclude file specs with the same tags as the undefined Environment.constants.
   # mail have to be ecluded explicitly because tests marked with it are not in it's specific dir.
   [:MAIL].each do |env_const|
