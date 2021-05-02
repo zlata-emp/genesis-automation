@@ -7,8 +7,14 @@
 #   **<code>rspec -r './config/ticket'</code>**
 # make sure you've selected the correct env variables for TICKET, SUB_DOMAIN and DOMAIN
 #
-require './config/local'
+require './config/stg_psp'
 class Environment < Constants
+  # overwrite config.pattern with dirs for the ticket
+  # format is comma separated list of dir names
+  def self.dirs_containing_spec_files
+    %w[consumer ui].each(&:to_s).join(',').downcase
+  end
+
   TICKET                = 'f2020022002'
   TRANSACTION_ID_PREFIX = "#{Dir.home.split('/').last}_#{TICKET}-"
 end

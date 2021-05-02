@@ -27,16 +27,6 @@ require ARGV[1] if ARGV.index('-r')
 # the additional setup, and require it from the spec files that actually need
 # it.
 #
-# This seems like a hack, probably it will be better to just list them in the Environment class
-def dirs_defined_in_env_list
-  dirs_defined_in_env_list = Environment.constants - Constants.constants
-  dirs_defined_in_env_list = dirs_defined_in_env_list.each(&:to_s).join(',').downcase
-  return dirs_containing_specs_list unless Environment.const_defined?(:PROCESSING)
-
-  processing_subdirs = Environment::PROCESSING.keys.each(&:to_s).join(',').downcase
-
-  "#{dirs_defined_in_env_list}}{,/}{,#{processing_subdirs}"
-end
 # See http://rubydoc.info/gems/rspec-core/RSpec/Core/Configuration
 RSpec.configure do |config|
   # Exclude erroneous specs.
@@ -55,7 +45,7 @@ RSpec.configure do |config|
   end
 
   # Load spec files only from dirs containing names from defined Envoronment constants
-  config.pattern = "spec/{,**/}{#{dirs_defined_in_env_list}}/{,**/}*_spec.rb"
+  config.pattern = "spec/{,**/}{#{Environment.dirs_containing_spec_files}}/{,**/}*_spec.rb"
 
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
