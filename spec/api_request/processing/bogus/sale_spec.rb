@@ -37,7 +37,7 @@ module APIRequest
         expect do
           Browser.submit_form(
             request.response_body_root[:redirect_url],
-            { password: 'pass' }
+            form_data: { password: 'pass' }
           )
         end.to raise_error(Mechanize::ResponseCodeError, %r{example.com/success})
       end

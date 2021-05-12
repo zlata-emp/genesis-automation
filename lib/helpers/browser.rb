@@ -34,7 +34,7 @@ class Browser
     agent
   end
 
-  def self.submit_form(url, form_data)
+  def self.submit_form(url, form_data: {})
     agent = mechanize_agent
     form = agent.get(url).form()
 
