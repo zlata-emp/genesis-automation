@@ -26,4 +26,23 @@ class Browser
   def self.new_web_driver(browser: :chrome)
     Selenium::WebDriver.for browser
   end
+
+  def self.mechanize_agent
+    agent = Mechanize.new
+    agent.user_agent_alias = 'Windows Chrome'
+
+    agent
+  end
+
+  def self.submit_form(url, form_data)
+    agent = mechanize_agent
+    form = agent.get(url).form()
+
+    form_data.each do |name, value|
+      form[name.to_s] = value
+    end
+
+    agent.submit(form)
+  end
+
 end

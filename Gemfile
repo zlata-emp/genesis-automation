@@ -14,4 +14,5 @@ group :development, :test do
   gem 'builder',             '~> 3.2'
   gem 'httpclient',          '~> 2.8'
   gem 'gmail',               '~> 0.7.1'
+  gem 'mechanize',           '~> 2.8'
 end

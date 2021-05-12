@@ -5,6 +5,7 @@ require 'active_support/all'
 require 'httpclient'
 require 'gmail'
 require 'selenium-webdriver'
+require 'mechanize'
 
 Dir['./lib/**/*.rb'].sort.each { |file| require file }
 
@@ -44,8 +45,10 @@ RSpec.configure do |config|
     end
   end
 
-  # Load spec files only from dirs containing names from defined Envoronment constants
-  config.pattern = "spec/{,**/}{#{Environment.dirs_containing_spec_files}}/{,**/}*_spec.rb"
+  unless config.files_to_run.one?
+    # Load spec files only from dirs containing names from defined Envoronment constants
+    config.pattern = "spec/{,**/}{#{Environment.dirs_containing_spec_files}}/{,**/}*_spec.rb"
+  end
 
   # rspec-expectations config goes here. You can use an alternate
   # assertion/expectation library such as wrong or the stdlib/minitest
