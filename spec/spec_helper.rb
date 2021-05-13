@@ -45,9 +45,11 @@ RSpec.configure do |config|
     end
   end
 
-  unless config.files_to_run.one?
-    # Load spec files only from dirs containing names from defined Envoronment constants
-    config.pattern = "spec/{,**/}{#{Environment.dirs_containing_spec_files}}/{,**/}*_spec.rb"
+  # Load spec files only from dirs containing names from defined Envoronment constants
+  # Default pattern is: **{,/*/**}/*_spec.rb
+  files_or_directories_to_run = RSpec.configuration.instance_variable_get(:@files_or_directories_to_run)
+  if files_or_directories_to_run.count == 1 && files_or_directories_to_run.first == 'spec'
+    config.pattern = "**{,/*/**}/{#{Environment.dirs_containing_spec_files}}/{,**/}*_spec.rb"
   end
 
   # rspec-expectations config goes here. You can use an alternate
