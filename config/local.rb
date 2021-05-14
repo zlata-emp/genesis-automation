@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require './config/constants'
+
 class Environment < Constants
   UI = {
     login_url: 'http://127.0.0.1:3000/admin_users/sign_in' }.with_indifferent_access.freeze
@@ -15,16 +17,16 @@ class Environment < Constants
   CONSUMER = {
     processing_url: 'http://127.0.0.1:3001/v1',
     api_login:      'dea4917c5fc30ba004935b852746982b69dd280e',
-    api_password:   'wI0sZpoglALEwjczLG0YzDHfMrpM48hEflbYcC7O',
+    api_password:   'txx,VCTQPnQtiUU1RMlxOISWE,xUnE890XgfwkSb',
     consumer_id:    1,
     consumer_email: 'no_reply@emerchantpay.com' }.with_indifferent_access.freeze
 
-  # Example how the config from sanity checks may look as ruby constant
-
-  # WPF = {
-  #   processing_url: 'http://127.0.0.1:3003',
-  #   gateways: %w[omnipay]
-  # }.with_indifferent_access.freeze
+  WPF = {
+    bogus: {
+      processing_url: 'http://127.0.0.1:3003/wpf',
+      consumer_id:    1,
+      api_login:      'dea4917c5fc30ba004935b852746982b69dd280e',
+      api_password:   'txx,VCTQPnQtiUU1RMlxOISWE,xUnE890XgfwkSb' } }.with_indifferent_access.freeze
 
   # ISSUING = {
   #   processing_url: 'http://127.0.0.1:3001/v1/issuing',
@@ -55,5 +57,8 @@ class Environment < Constants
       #     master: 'e467188059d01d1b2263190a02caa28a' } } ,
       token:          'caffe33f9faec0f798739cd19ab785177e4669a2',
       api_login:      'dea4917c5fc30ba004935b852746982b69dd280e',
-      api_password:   'wI0sZpoglALEwjczLG0YzDHfMrpM48hEflbYcC7O' } }.with_indifferent_access.freeze
+      api_password:   'txx,VCTQPnQtiUU1RMlxOISWE,xUnE890XgfwkSb' } }.with_indifferent_access.freeze
+
 end
+
+require './config/config_rspec'
