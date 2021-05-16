@@ -58,7 +58,6 @@ class Environment < Constants
       token:          'caffe33f9faec0f798739cd19ab785177e4669a2',
       api_login:      'dea4917c5fc30ba004935b852746982b69dd280e',
       api_password:   'txx,VCTQPnQtiUU1RMlxOISWE,xUnE890XgfwkSb' } }.with_indifferent_access.freeze
-
 end
 
 require './config/config_rspec'

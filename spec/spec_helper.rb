@@ -11,4 +11,3 @@ Dir['./lib/**/*.rb'].sort.each { |file| require file }
 
 # require default env
 require './config/local' unless ARGV.index('-r')
-

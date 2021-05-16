@@ -44,5 +44,4 @@ class Browser
 
     agent.submit(form)
   end
-
 end
