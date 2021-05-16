@@ -35,7 +35,7 @@ module APIRequest
         expect(request.response_body_root).to include({ status: 'pending_async' })
 
         expect do
-          Browser.submit_form(
+          Browser.submit_form_headless(
             request.response_body_root[:redirect_url],
             form_data: { password: 'pass' }
           )

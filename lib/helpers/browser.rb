@@ -34,7 +34,7 @@ class Browser
     agent
   end
 
-  def self.submit_form(url, form_data: {})
+  def self.submit_form_headless(url, form_data: {})
     agent = mechanize_agent
     form = agent.get(url).form()
 
@@ -43,5 +43,14 @@ class Browser
     end
 
     agent.submit(form)
+  end
+
+  def self.submit_form(page, form_data: {})
+    form_data.each do |name, value|
+      elem = page.find_element(:id, name.to_s)
+      elem.clear if elem.attribute('type').include?('text')
+      elem.send_keys value
+    end
+    page.find_element(:name, 'commit').click
   end
 end
