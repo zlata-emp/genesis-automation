@@ -45,12 +45,13 @@ class Browser
     agent.submit(form)
   end
 
-  def self.submit_form(page, form_data: {})
+  def self.fill_form_fields(page, form_data: {}, finder: :id)
     form_data.each do |name, value|
-      elem = page.find_element(:id, name.to_s)
+      elem = page.find_element(finder, name.to_s)
       elem.clear if elem.attribute('type').include?('text')
       elem.send_keys value
     end
-    page.find_element(:name, 'commit').click
+
+    page
   end
 end

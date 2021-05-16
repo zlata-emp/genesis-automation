@@ -13,16 +13,9 @@ describe 'Login', :ui do
     page = Browser.reuse_page
     page.navigate.to Environment::UI[:login_url]
 
-    user_field = page.find_element(:id, 'admin_user_login')
-    user_field.click
-    user_field.send_keys 'admin'
-
-    pass_field = page.find_element(:name, 'admin_user[password]')
-    pass_field.click
-    pass_field.send_keys 'Test1234!!'
-
-    submit_button = page.find_element(:name, 'commit')
-    submit_button.click
+    Browser.fill_form_fields(page, finder: :id, form_data: { admin_user_login: 'admin' })
+    Browser.fill_form_fields(page, finder: :name, form_data: { 'admin_user[password]': 'Test1234!!' })
+    page.find_element(:name, 'commit').click
 
     expect(page.title).to be == 'admin - Dashboard: index'
   end
