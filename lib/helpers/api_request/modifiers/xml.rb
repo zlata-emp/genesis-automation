@@ -22,7 +22,7 @@ module APIRequest
 
     def finalize_modification
       key, value = body.first
-      value.to_xml(root: key, dasherize: false)
+      value.to_xml(root: key, dasherize: false, skip_types: true, indent: 2)
     end
   end
 end
