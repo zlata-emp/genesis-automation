@@ -4,8 +4,10 @@ module APIRequest
   describe 'Processing bogus wpf transaction', :api, wpf: :bogus do
     request_filename = 'wpf/processing/wpf_transaction.xml'
     env_config       = Environment::WPF[:bogus]
-    context 'with valid request' do
+
+    context 'with valid sale request' do
       request_file = Body.load_from_file(request_filename)
+                         .merge_params(ProcessingHelper.transaction_types([:sale]))
                          .merge_params(ProcessingHelper.transaction_id_param)
                          .merge_params(ProcessingHelper.master_test_card_params)
                          .merge_params({ consumer_id: env_config[:consumer_id] })

@@ -7,6 +7,11 @@ module APIRequest
       { transaction_id: "#{Environment::TRANSACTION_ID_PREFIX}d#{timestamp}" }
     end
 
+    def self.transaction_types(types)
+      types = types.map { |type| { name: type.to_s } }
+      { transaction_types: types }
+    end
+
     def self.master_test_card_params
       { card_number:      '5555555555554444',
         cvv:              '123',
