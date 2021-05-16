@@ -154,7 +154,7 @@ Layout/MultilineMethodCallIndentation:
     Checks indentation of method calls with the dot operator
     that span more than one line.
   Enabled: true
-  EnforcedStyle: indented_relative_to_receiver
+  EnforcedStyle: aligned
 
 Layout/HashAlignment:
   EnforcedColonStyle: table

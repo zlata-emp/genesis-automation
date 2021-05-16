@@ -7,8 +7,8 @@ module APIRequest
 
     context 'with valid request' do
       request_file = Body.load_from_file(request_filename)
-                       .merge_params(ProcessingHelper.transaction_id_param)
-                       .merge_params(ProcessingHelper.master_test_card_params)
+                         .merge_params(ProcessingHelper.transaction_id_param)
+                         .merge_params(ProcessingHelper.master_test_card_params)
 
       it 'is approved' do
         request = Request.build_and_submit(
@@ -23,8 +23,8 @@ module APIRequest
     context 'with valid 3d async request' do
       request_filename = 'processing/async_sale3d.xml'
       request_file = Body.load_from_file(request_filename)
-                       .merge_params(ProcessingHelper.transaction_id_param)
-                       .merge_params(ProcessingHelper.visa_test_card_3d_async_params)
+                         .merge_params(ProcessingHelper.transaction_id_param)
+                         .merge_params(ProcessingHelper.visa_test_card_3d_async_params)
 
       it 'is approved' do
         request = Request.build_and_submit(

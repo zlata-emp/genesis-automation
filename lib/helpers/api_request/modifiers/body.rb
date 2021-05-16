@@ -7,7 +7,7 @@ module APIRequest
 
     def self.load_from_file(filename)
       APIRequest.const_get(content_type_from_filename(filename).capitalize)
-        .new("#{Environment::REQUESTS_DIR}/#{filename}")
+                .new("#{Environment::REQUESTS_DIR}/#{filename}")
     end
 
     def self.parse(content, content_type)
