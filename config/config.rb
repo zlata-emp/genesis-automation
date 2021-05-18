@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class Config
-  LOGGER_LEVEL          = Logger::DEBUG
+  LOGGER_LEVEL          = Logger::WARN
   REQUESTS_DIR          = 'requests'
   TRANSACTION_ID_PREFIX = 'qa_checks-'
 
