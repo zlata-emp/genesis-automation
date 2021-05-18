@@ -25,6 +25,7 @@ class Environment < Config
     bogus: {
       processing_url: 'http://127.0.0.1:3003/wpf',
       consumer_id:    1,
+      consumer_email: 'no_reply@emerchantpay.com',
       api_login:      'dea4917c5fc30ba004935b852746982b69dd280e',
       api_password:   'txx,VCTQPnQtiUU1RMlxOISWE,xUnE890XgfwkSb' } }.with_indifferent_access.freeze
 
