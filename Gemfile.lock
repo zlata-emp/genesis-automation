@@ -112,6 +112,7 @@ GEM
     unicode-display_width (2.0.0)
     webrick (1.7.0)
     webrobots (0.1.2)
+    xml-simple (1.1.8)
     zeitwerk (2.4.2)
 
 PLATFORMS
@@ -129,6 +130,7 @@ DEPENDENCIES
   rubocop-performance (~> 1.11.0)
   rubocop-rspec (~> 2.2.0)
   selenium-webdriver (~> 3.142.7)
+  xml-simple (~> 1.1)
 
 RUBY VERSION
    ruby 2.7.2p137

@@ -15,4 +15,5 @@ group :development, :test do
   gem 'httpclient',          '~> 2.8'
   gem 'gmail',               '~> 0.7.1'
   gem 'mechanize',           '~> 2.8'
+  gem 'xml-simple',          '~> 1.1'
 end

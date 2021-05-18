@@ -11,7 +11,14 @@ module APIRequest
     end
 
     def self.parse(content)
-      Hash.from_xml(content).with_indifferent_access
+      XmlSimple.xml_in(
+        content,
+        KeepRoot:      true,
+        AttrPrefix:    true,
+        SuppressEmpty: true,
+        KeyToSymbol:   true,
+        ForceArray:    false
+      ).with_indifferent_access
     end
 
     private
@@ -21,8 +28,7 @@ module APIRequest
     end
 
     def finalize_modification
-      key, value = body.first
-      value.to_xml(root: key, dasherize: false, skip_types: true, indent: 2)
+      XmlSimple.xml_out(body, RootName: nil, SuppressEmpty: true, AttrPrefix: true)
     end
   end
 end

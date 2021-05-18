@@ -14,8 +14,8 @@ module APIRequest
     end
 
     def self.transaction_types(types)
-      types = types.map { |type| { name: type.to_s } }
-      { transaction_types: types }
+      types = types.map { |type| { '@name': type.to_s } }
+      { transaction_types: { transaction_type: types } }
     end
 
     def self.wpf_card_params(card_number:,
