@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require './config/constants'
+require './config/config'
 # require './config/stg_psp'
 require './config/local'
 
@@ -11,7 +11,7 @@ require './config/local'
 #   **<code>rspec -r './config/ticket'</code>**
 # make sure you've selected the correct env variables for TICKET, SUB_DOMAIN and DOMAIN
 #
-class Environment < Constants
+class Environment < Config
   # overwrite config.pattern with dirs for the ticket
   # format is comma separated list of dir names
   def self.dirs_containing_spec_files

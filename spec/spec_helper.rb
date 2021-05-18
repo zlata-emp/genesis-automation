@@ -6,6 +6,7 @@ require 'httpclient'
 require 'gmail'
 require 'selenium-webdriver'
 require 'mechanize'
+require 'logger'
 
 Dir['./lib/**/*.rb'].sort.each { |file| require file }
 

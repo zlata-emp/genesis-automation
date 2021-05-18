@@ -29,8 +29,6 @@ module APIRequest
     POST   = 'post'
     PUT    = 'put'
 
-    attr_reader :http_request, :request_params
-
     def self.build(request_body, env_config:, merge_params: {})
       @request = new(
                    { url:          env_config[:processing_url],
@@ -40,6 +38,10 @@ module APIRequest
                      request_url:  request_url(request_body.filename, env_config),
                      request_body: request_body.modify_request(merge_params) }
                  )
+
+      Log.debug { "Request to: #{env_config[:processing_url]}\n#{@request.request_body}" }
+
+      @request
     end
 
     def self.build_and_submit(request_body, env_config:, merge_params: {})
@@ -55,6 +57,7 @@ module APIRequest
     end
 
     def self.request_url(filename, env_config)
+      Log.debug { "Loading #{filename}\nenv_config: #{env_config}" }
       return env_config[:token] unless filename.include?('_request')
 
       filename.split('/').last.split('_request').first
@@ -88,6 +91,8 @@ module APIRequest
 
     private
 
+    attr_reader :http_request, :request_params
+
     def generate_url_with_path(url, path = nil)
       return url if path.blank?
 
@@ -95,7 +100,10 @@ module APIRequest
     end
 
     def perform_request(http_method, url, request_head, request_body)
-      http_request.public_send(http_method, url, request_body, request_head, follow_redirect: true).body
+      response = http_request.public_send(http_method, url, request_body, request_head, follow_redirect: true)
+      Log.debug { "Response: #{response.body}" }
+
+      response.body
     end
 
     def update_http_request_auth(url)

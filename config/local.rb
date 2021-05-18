@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-require './config/constants'
+require './config/config'
 
-class Environment < Constants
+class Environment < Config
   UI = {
     login_url: 'http://127.0.0.1:3000/admin_users/sign_in' }.with_indifferent_access.freeze
 
