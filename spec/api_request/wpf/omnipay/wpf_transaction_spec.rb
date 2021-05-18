@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 module APIRequest
-  describe 'Processing bogus wpf transaction', :api, wpf: :bogus do
+  describe 'Processing omnipay wpf transaction', :api, wpf: :omnipay do
     request_filename = 'wpf/processing/wpf_transaction.xml'
     env_config       = Environment::WPF[:omnipay]
 
