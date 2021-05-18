@@ -27,12 +27,12 @@ Naming/MemoizedInstanceVariableName:
 
 Metrics/ClassLength:
   Description: "Avoid classes longer than 100 lines of code."
-  Max: 100
+  Max: 500
   Enabled: true
 
 Metrics/ModuleLength:
   Description: "Avoid modules longer than 100 lines of code."
-  Max: 100
+  Max: 500
   Enabled: true
 
 Metrics/ParameterLists:
@@ -123,7 +123,7 @@ Layout/ArgumentAlignment:
   EnforcedStyle: with_first_argument
 
 Layout/FirstMethodParameterLineBreak:
-  Enabled: true
+  Enabled: false
 
 Layout/FirstMethodArgumentLineBreak:
   Enabled: true
