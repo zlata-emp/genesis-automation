@@ -9,7 +9,8 @@ module APIRequest
       request_file = Body.load_from_file(request_filename)
                          .merge_params(ProcessingHelper.transaction_types([:sale]))
                          .merge_params(ProcessingHelper.transaction_id_param)
-                         .merge_params({ consumer_id: env_config[:consumer_id] })
+                         .merge_params({ consumer_id:    env_config[:consumer_id],
+                                         customer_email: env_config[:consumer_email] })
 
       it 'is approved' do
         request = Request.build_and_submit(
@@ -27,7 +28,10 @@ module APIRequest
           page,
           finder:    :id,
           form_data: ProcessingHelper.wpf_card_params(card_number: '5555555555554444')
-        ).find_element(:name, 'commit').click
+        )
+
+        Browser.check_wpf_form_tac(page).find_element(:name, 'commit').click
+
         expect(page.current_url).to include 'return_success'
       end
     end
@@ -36,7 +40,8 @@ module APIRequest
       request_file = Body.load_from_file(request_filename)
                          .merge_params(ProcessingHelper.transaction_types([:authorize]))
                          .merge_params(ProcessingHelper.transaction_id_param)
-                         .merge_params({ consumer_id: env_config[:consumer_id] })
+                         .merge_params({ consumer_id:    env_config[:consumer_id],
+                                         customer_email: env_config[:consumer_email] })
 
       it 'is approved' do
         request = Request.build_and_submit(
@@ -54,7 +59,10 @@ module APIRequest
           page,
           finder:    :id,
           form_data: ProcessingHelper.wpf_card_params(card_number: '5555555555554444')
-        ).find_element(:name, 'commit').click
+        )
+
+        Browser.check_wpf_form_tac(page).find_element(:name, 'commit').click
+
         expect(page.current_url).to include 'return_success'
       end
     end
@@ -63,7 +71,8 @@ module APIRequest
       request_file = Body.load_from_file(request_filename)
                          .merge_params(ProcessingHelper.transaction_types([:init_recurring_sale]))
                          .merge_params(ProcessingHelper.transaction_id_param)
-                         .merge_params({ consumer_id: env_config[:consumer_id] })
+                         .merge_params({ consumer_id:    env_config[:consumer_id],
+                                         customer_email: env_config[:consumer_email] })
 
       it 'is approved' do
         request = Request.build_and_submit(
@@ -81,7 +90,10 @@ module APIRequest
           page,
           finder:    :id,
           form_data: ProcessingHelper.wpf_card_params(card_number: '5555555555554444')
-        ).find_element(:name, 'commit').click
+        )
+
+        Browser.check_wpf_form_tac(page).find_element(:name, 'commit').click
+
         expect(page.current_url).to include 'return_success'
       end
     end

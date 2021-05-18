@@ -9,7 +9,8 @@ module APIRequest
       request_file = Body.load_from_file(request_filename)
                          .merge_params(ProcessingHelper.transaction_types([:sale]))
                          .merge_params(ProcessingHelper.transaction_id_param)
-                         .merge_params({ consumer_id: env_config[:consumer_id] })
+                         .merge_params({ consumer_id:    env_config[:consumer_id],
+                                         customer_email: env_config[:consumer_email] })
 
       it 'is approved' do
         request = Request.build_and_submit(
@@ -36,7 +37,8 @@ module APIRequest
       request_file = Body.load_from_file(request_filename)
                          .merge_params(ProcessingHelper.transaction_types([:authorize]))
                          .merge_params(ProcessingHelper.transaction_id_param)
-                         .merge_params({ consumer_id: env_config[:consumer_id] })
+                         .merge_params({ consumer_id:    env_config[:consumer_id],
+                                         customer_email: env_config[:consumer_email] })
 
       it 'is approved' do
         request = Request.build_and_submit(
@@ -63,7 +65,8 @@ module APIRequest
       request_file = Body.load_from_file(request_filename)
                          .merge_params(ProcessingHelper.transaction_types([:init_recurring_sale]))
                          .merge_params(ProcessingHelper.transaction_id_param)
-                         .merge_params({ consumer_id: env_config[:consumer_id] })
+                         .merge_params({ consumer_id:    env_config[:consumer_id],
+                                         customer_email: env_config[:consumer_email] })
 
       it 'is approved' do
         request = Request.build_and_submit(

@@ -54,4 +54,10 @@ class Browser
 
     page
   end
+
+  def self.check_wpf_form_tac(page)
+    page.find_element(:xpath, "//label[@for='wpf_form_tac']").click
+
+    page
+  end
 end
