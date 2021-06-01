@@ -2,6 +2,11 @@ This is an RSpec project to automate user interaction with api service and web p
 
 </br>
 
+### Goal
+To automate this test plan:
+https://docs.google.com/spreadsheets/d/1g1LNgt0YJcgP7wFXbpv8TGb2eaQxmKLkmjVUFsYI-JY/edit#gid=541028001
+
+
 ### Usage 
 
 The project uses features from rspec. Filtering tests is done by specifying [tags](https://relishapp.com/rspec/rspec-core/v/3-3/docs/command-line/tag-option), [pattern](https://relishapp.com/rspec/rspec-core/v/3-3/docs/command-line/pattern-option) or [example](https://relishapp.com/rspec/rspec-core/v/3-3/docs/command-line/example-option) command-line options.
